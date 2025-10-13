@@ -110,6 +110,9 @@ git clone https://github.com/tektutor/openshift-1317oct-2025.git
 ## Info - Docker High-Level Architecture
 ![docker](DockerHighLevelArchitecture.png)
 
+## Info - Docker Image Layers
+![docker]()
+
 ## Lab - Checking the docker version and details
 ```
 docker --version
