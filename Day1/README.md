@@ -222,3 +222,18 @@ docker ps
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/954e44f5-e3f9-40ae-88a3-cbdcdde300b3" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/038ec96c-8adb-4476-a821-c7c158ebb874" />
+
+## Lab - Stopping containers that matches multiple name patterns
+```
+docker ps --filter "name=jegan|bennet"
+docker stop $(docker ps -q --filter "name=jegan|bennet")
+docker ps
+```
+
+## Lab - Starting containers that matches multiple name patterns
+```
+docker ps --filter "name=jegan|bennet"
+docker start $(docker ps -aq --filter "name=jegan|bennet")
+docker ps
+```
+
