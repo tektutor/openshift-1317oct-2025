@@ -61,3 +61,26 @@ git clone https://github.com/tektutor/openshift-1317oct-2025.git
   - Total number of Physical Cores - 8 x 4 x 256 = 32*256 = 8192 Physical CPU core
   - What are the total logic/virtual cores = 8192 * 2 = 16384 logical/virtual cores
 </pre>
+
+## Info - Containerization
+<pre>
+- is an application virtualization technology
+- each containers represents anapplicaiton process or one application
+- in certain case, one or more containers represents a single application
+- containers are not Operating System
+- containers are not allocated with dedicated hardware resources
+  - all containers that runs in the same Host machine, shares the hardware resources available on the Host machine
+  - containers don't have their own OS Kernel, hence they depend on the Host OS Kernel
+- each container get its own
+  - IP address(es)
+  - Network Stack
+  - Network Card
+  - File System
+  - Port range ( 0 - 65535 )
+- hence containers behave like a VM/OS in many scenarios, however container is just application process not a OS
+- technically comparing a container with VM/OS is wrong
+- generally people tend to compare containers with VM/OS as there are many similarities, but they are still technically different
+- containers will never be able to replace virtualization or Operating System
+- containers and virtualization are not competing technology, they are complementing technology
+- containers can run on OS installed on bare metal, VMs, etc.,
+</pre>
