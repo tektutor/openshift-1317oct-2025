@@ -210,3 +210,15 @@ docker ps --filter "name=jegan"
 ```
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8a4f9548-c093-4abb-b62c-e00a89b160eb" />
+
+## Lab - Stopping containers that matches a name pattern
+```
+docker ps
+docker ps --filter "name=jegan"
+docker ps -q --filter "name=jegan"
+docker stop $(docker ps -q --filter "name=jegan")
+
+docker ps
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/954e44f5-e3f9-40ae-88a3-cbdcdde300b3" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/038ec96c-8adb-4476-a821-c7c158ebb874" />
