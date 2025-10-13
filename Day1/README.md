@@ -50,3 +50,14 @@ git clone https://github.com/tektutor/openshift-1317oct-2025.git
 - this type of Hypervisors are used in Laptops, Desktops & Workstations
 </pre>
 
+## Processor
+<pre>
+- Processors comes in 2 packages
+  1. SCM ( Single Chip Module - One IC has one Processor )
+  2. MCM ( Multiple Chip Module - One IS has multiple Processors )
+- Server Motherboards they generally supports multiple Processor Sockets ( 8 Sockets )
+  - Let's assume, in each Processor Socket if we install a MCM Processor with 4 Processor/IC ( 1 Socket )
+  - Let's assume, each Processor supports about 256 CPU Cores
+  - Total number of Physical Cores - 8 x 4 x 256 = 32*256 = 8192 Physical CPU core
+  - What are the total logic/virtual cores = 8192 * 2 = 16384 logical/virtual cores
+</pre>
