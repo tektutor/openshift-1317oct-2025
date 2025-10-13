@@ -134,6 +134,7 @@ docker images
 ```
 
 ## Lab - Creating a container and running in background(daemon) mode
+In the below command, replace 'jegan' with your name to avoid name conflicts.
 ```
 docker run -dit --name ubuntu1-jegan --hostname ubuntu1-jegan ubuntu:latest /bin/bash
 docker run -dit --name ubuntu2-jegan --hostname ubuntu2-jegan ubuntu:latest /bin/bash
