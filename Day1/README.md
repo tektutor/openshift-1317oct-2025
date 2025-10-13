@@ -248,3 +248,21 @@ docker ps
 ```
 docker rename <your-current-container-name> <new-container-name>
 ```
+
+## Lab - Deleting running containers
+
+In order to gracefully delete a container, it must be stopped first
+```
+docker stop ubuntu1-jegan
+docker rm ubuntu1-jegan
+```
+
+If you wish to delete a container forcibly
+```
+docker rm -f ubuntu2-jegan
+```
+
+To delete multiple running containers forcibly
+```
+docker rm -f $(docker ps -q --format "name=jegan")
+```
