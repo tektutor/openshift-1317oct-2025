@@ -441,6 +441,13 @@ docker ps
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/63bc611b-5fc3-4bee-872f-150842157e81" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d45f9e77-2ee2-47c2-ba33-b001290c7e27" />
 
+From your terminal, each time you should see responses coming from different web server.
+```
+curl  -L --http2 http://localhost:8001
+curl  -L --http2 http://localhost:8001
+curl  -L --http2 http://localhost:8001
+```
+
 Accessing the lb from your lab machine firefox browser
 ```
 http://localhost:8001
