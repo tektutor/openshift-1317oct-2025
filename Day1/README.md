@@ -119,3 +119,9 @@ docker images
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/44d9e34d-2587-43e2-8b6d-ded46c229b2f" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/7bf9b0a7-1438-4576-aa13-15a40ab6aac2" />
 
+
+## Lab - Listing image from docker local registry
+```
+docker images
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/675e090e-e1f1-4be6-aaa5-04ef199292c0" />
