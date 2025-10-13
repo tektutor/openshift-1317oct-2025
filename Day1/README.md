@@ -309,5 +309,6 @@ hostname
 hostname -i
 ls
 exit
+docker ps -a
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ae59da07-6d29-417a-a6c2-ecc65a2f0e2d" />
