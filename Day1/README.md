@@ -237,3 +237,9 @@ docker start $(docker ps -aq --filter "name=jegan|bennet")
 docker ps
 ```
 
+## Lab - Restarting containers that matches multiple name patterns
+```
+docker ps --filter "name=jegan|bennet"
+docker start $(docker ps -aq --filter "name=jegan|bennet")
+docker ps
+```
