@@ -285,3 +285,17 @@ docker inspect -f {{.NetworksSettings.IPAddress}} container29_jegan
 ping -c 2 172.17.0.7
 ```  
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3e02f569-b9ce-453d-8313-64eadf15e986" />
+
+## Lab - Inspecting a container to get details about the container
+```
+docker inspect ubuntu1-jegan
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/215bd517-a187-4ea5-89df-d438c373acfe" />
+
+## Lab - Inspecting an image
+```
+docker image inspect ubuntu:latest
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/dcf4052b-097b-4cea-bb76-01bc872f0e71" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0b27874f-8662-4c72-b2b4-715af2a51edf" />
