@@ -395,6 +395,7 @@ Let's create a lb container with port-forwarding ( You need to choose your non-c
 docker run -d --name lb --hostname lb -p 8001:80 nginx:latest
 docker ps
 ```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/cabb370c-aa94-4897-ba5f-801540e376d7" />
 
 Let's configure the lb container to work as a load balancer. For this we need to configure the nginx.conf with the respective nginx1, nginx2 and nginx3 web server container IPs as shown below
 <pre>
