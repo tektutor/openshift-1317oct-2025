@@ -152,4 +152,4 @@ List all running containers
 ```
 docker ps
 ```
-<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d3a3f970-0998-49f6-b351-ff7c3d7b62fc" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/82d55917-bb77-4c7b-9b08-dbb5968ce375" />
