@@ -389,3 +389,63 @@ curl http://172.17.0.4:80
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9c787006-f377-4512-9c63-4584e799112b" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/fa3f9b7e-eee6-4fbf-a388-1b9949462563" />
+
+Let's create a lb container
+```
+docker run -d --name lb --hostname lb nginx:latest
+docker ps
+```
+
+Let's configure the lb container to work as a load balancer. For this we need to configure the nginx.conf with the respective nginx1, nginx2 and nginx3 web server container IPs as shown below
+<pre>
+# Nginx for OpenShift – fully compatible with non-root UID
+# user directive removed (ignored anyway in OpenShift)
+
+worker_processes auto;
+
+error_log /dev/stderr warn;
+pid /var/run/nginx.pid;
+
+events {
+    worker_connections 1024;
+}
+
+http {
+    upstream backend {
+        server 172.17.0.2:80;
+        server 172.17.0.3:80;
+        server 172.17.0.4:80;
+    }
+
+    server {
+        location / {
+            proxy_pass http://backend;
+        }
+    }
+}  
+</pre>
+
+Let's copy the configured nginx.conf into the lb container
+```
+docker cp nginx.conf lb:/etc/nginx/nginx.conf
+```
+
+To apply config changes done on lb container, we need to restart lb container
+```
+docker restart lb
+docker ps
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a4fb7f64-5e6c-47a3-862f-7bd24e473930" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b269a01b-dc81-4e7c-a686-33d164a64702" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/63bc611b-5fc3-4bee-872f-150842157e81" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d45f9e77-2ee2-47c2-ba33-b001290c7e27" />
+
+Accessing the lb from your lab machine firefox browser
+```
+http://localhost:8001
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a3ee6f7d-d0e0-4389-a73d-e1b81e959d45" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9cb77404-0f50-4e02-9fe2-d96e89714f18" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a48e5129-9d45-45bf-9a96-eca7db200930" />
+
