@@ -351,3 +351,40 @@ curl http://172.17.0.4:80
 
 ## Info - Docker Port Forwarding
 ![docker](PortForwarding.png)
+
+## Lab - Setting up Load Balancer using nginx docker image
+
+Let's first create 3 web server containers
+```
+docker run -d --name nginx1 --hostname nginx1 nginx:latest
+docker run -d --name nginx2 --hostname nginx2 nginx:latest
+docker run -d --name nginx3 --hostname nginx3 nginx:latest
+```
+
+Let's check the container IPs
+```
+docker inspect nginx1 | grep IPA
+docker inspect nginx2 | grep IPA
+docker inspect nginx3 | grep IPA
+```
+
+Let's customize the web server on each web server
+```
+echo "Server 1" > index.html
+docker cp index.html nginx1:/usr/share/nginx/html/index.html
+
+echo "Server 2" > index.html
+docker cp index.html nginx2:/usr/share/nginx/html/index.html
+
+echo "Server 3" > index.html
+docker cp index.html nginx3:/usr/share/nginx/html/index.html
+```
+
+Let's verify the web pages served by nginx1, nginx2 and nginx3 web server containers
+```
+curl http://172.17.0.2:80
+curl http://172.17.0.3:80
+curl http://172.17.0.4:80
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9c787006-f377-4512-9c63-4584e799112b" />
