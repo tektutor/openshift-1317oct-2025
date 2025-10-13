@@ -243,3 +243,8 @@ docker ps --filter "name=jegan|bennet"
 docker restart $(docker ps -aq --filter "name=jegan|bennet")
 docker ps
 ```
+
+## Lab - Renaming a container
+```
+docker rename <your-current-container-name> <new-container-name>
+```
