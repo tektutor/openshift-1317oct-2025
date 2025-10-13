@@ -1,4 +1,4 @@
-# Day 1
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1b0df838-bbe8-4029-80ac-60c8a3dd134a" /># Day 1
 
 ## Lab - Cloning this repository in your training machine ( terminal )
 ```
@@ -462,4 +462,57 @@ docker logs lb
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/fd14b684-fd4c-41ef-841d-6d63e1d9ea5c" />
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e8051fe3-7ef4-4f6c-b9c6-e1ea7bb869f0" />
+
+
+## Lab - Docker Volume Mounting(Mapping) to store data outside the container
+```
+cd ~
+mkdir -p /tmp/jegan/mysql
+
+docker run -d --name mysql --hostname mysql -e MYSQL_ROOT_PASSWORD=root@123 -v /tmp/jegan/mysql:/var/lib/mysql mysql:latest
+
+docker ps
+```
+
+Let's get inside the mysql container shell, when it prompts for password type 'root@123' without quotes
+```
+docker exec -it mysql /bin/sh
+mysql -u root -p
+SHOW DATABASES;
+CREATE DATABASE tektutor;
+USE tektutor;
+
+CREATE TABLE training ( id INT NOT NULL, name VARCHAR(300) NOT NULL, duration VARCHAR(300) NOT NULL, PRIMARY KEY(id));
+
+INSERT INTO training VALUES ( 1, "DevOps", "5 Days" );
+INSERT INTO training VALUES ( 2, "Advanced Openshift", "5 Days" );
+
+SELECT * FROM training;
+
+exit
+exit
+```
+
+Let's delete the mysql container
+```
+docker rm -f mysql
+```
+
+Let's create new mysql container using the same external folder and mount it inside new container
+```
+docker run -d --name mysql2 --hostname mysql2 -e MYSQL_ROOT_PASSWORD=root@123 -v /tmp/jegan/mysql:/var/lib/mysql mysql:latest
+
+docker exec -it mysql2 /bin/sh
+mysql -u root -p
+SHOW DATBASES;
+USE tektutor;
+SHOW TABLES;
+SELECT * FROM training;
+exit
+exit
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/6bdf961f-7cc7-4692-ba3d-8d94c52291a0" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8c392516-e482-4712-b9e2-8fa36148e054" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/94c4be0f-a96c-41bf-812f-2f921f88f067" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/33973ecb-a4d9-454f-b65c-1121800f8a0b" />
 
