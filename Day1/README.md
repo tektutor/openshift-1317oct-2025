@@ -392,7 +392,7 @@ curl http://172.17.0.4:80
 
 Let's create a lb container
 ```
-docker run -d --name lb --hostname lb nginx:latest
+docker run -d --name lb --hostname lb -p 8001:80 nginx:latest
 docker ps
 ```
 
