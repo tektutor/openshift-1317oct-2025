@@ -283,3 +283,4 @@ docker inspect -f {{.NetworksSettings.IPAddress}} ubuntu2-jegan
 docker inspect -f {{.NetworksSettings.IPAddress}} ubuntu3-jegan
 
 ```  
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3e02f569-b9ce-453d-8313-64eadf15e986" />
