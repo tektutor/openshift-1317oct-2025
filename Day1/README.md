@@ -184,4 +184,5 @@ docker stop ubuntu1-jegan ubuntu2-jegan ubuntu3-jegan
 docker ps
 docker ps -a
 ```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0cb760eb-93c1-401f-94b8-cc950ae3046d" />
 
