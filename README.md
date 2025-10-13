@@ -14,6 +14,7 @@ https://forms.cloud.microsoft/r/Har7U6sJW1
 
 
 ## Server 1 Participants ( 192.168.3.200 )
+![server1](server1.png)
 
 ## Server 2 Participants ( 192.168.3.201 )
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f8fc29ef-37be-443e-a12e-071957edaa9d" />
