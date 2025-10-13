@@ -510,9 +510,12 @@ SHOW TABLES;
 SELECT * FROM training;
 exit
 exit
+
+ls -l /tmp/jegan/mysql
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/6bdf961f-7cc7-4692-ba3d-8d94c52291a0" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8c392516-e482-4712-b9e2-8fa36148e054" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/94c4be0f-a96c-41bf-812f-2f921f88f067" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/33973ecb-a4d9-454f-b65c-1121800f8a0b" />
 
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2e395442-c0b3-4d34-816e-cf625a6d39c6" />
