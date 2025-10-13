@@ -84,3 +84,25 @@ git clone https://github.com/tektutor/openshift-1317oct-2025.git
 - containers and virtualization are not competing technology, they are complementing technology
 - containers can run on OS installed on bare metal, VMs, etc.,
 </pre>
+
+## Info - Container Runtime Overview
+<pre>
+- is a low-level software, not user-friendly that helps us manage containers and container images
+- as it is not user-friendly, generally end-users don't use this software directly
+- internally they depend on the Linux Kernel to support containerization
+- examples
+  - runC container runtime
+  - cRun container runtime
+  - CRI-O container runtime
+</pre>
+
+## Info - Container Engine Overview
+<pre>
+- is a high-level software, very user-friendly that helps us manage containers and container images
+- internally, they depend on Container Runtime to manage containers and container images
+- examples
+  - Docker - Container Engine
+    - depends on containerd, which internally depends on runC container runtime
+  - Podman - Container Engine
+    - depends on either cRun/CRI-O container runtime
+</pre>
