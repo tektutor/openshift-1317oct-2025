@@ -274,3 +274,12 @@ docker images
 docker rmi hello-world:latest
 docker images
 ```
+
+## Lab - Finding IP address of a container
+```
+docker inspect ubuntu1-jegan | grep IPA
+docker inspect -f {{.NetworksSettings.IPAddress}} ubuntu1-jegan
+docker inspect -f {{.NetworksSettings.IPAddress}} ubuntu2-jegan
+docker inspect -f {{.NetworksSettings.IPAddress}} ubuntu3-jegan
+
+```  
