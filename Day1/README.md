@@ -299,3 +299,15 @@ docker image inspect ubuntu:latest
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/dcf4052b-097b-4cea-bb76-01bc872f0e71" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0b27874f-8662-4c72-b2b4-715af2a51edf" />
+
+## Lab - Creating a container in interactive(foreground) mode
+
+When you exit from the container shell, it will also exit the container.
+```
+docker run -it --name ubuntu10-jegan ubuntu:latest /bin/bash
+hostname
+hostname -i
+ls
+exit
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ae59da07-6d29-417a-a6c2-ecc65a2f0e2d" />
