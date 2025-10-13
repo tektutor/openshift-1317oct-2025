@@ -319,6 +319,14 @@ docker ps -a
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ae59da07-6d29-417a-a6c2-ecc65a2f0e2d" />
 
+## Info - What kind of applications are ideal to be containerized?
+<pre>
+- any blocking applications
+- Database servers, Web Servers, Application Servers
+- REST API, SOAP API, Microservices
+- Shell commands
+</pre>
+
 ## Lab - Let's create a nginx web server container
 ```
 docker run -d --name nginx1-jegan --hostname nginx1-jegan nginx:latest
