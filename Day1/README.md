@@ -180,7 +180,7 @@ docker ps
 
 Stop multiple running containers
 ```
-docker stop ubuntu1-jegan ubuntu2-jegan ubuntu3-jegan
+docker stop ubuntu2-jegan ubuntu3-jegan ubuntu4-jegan
 docker ps
 docker ps -a
 ```
