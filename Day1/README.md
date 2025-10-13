@@ -354,7 +354,7 @@ curl http://172.17.0.4:80
 
 ## Lab - Setting up Load Balancer using nginx docker image
 
-Let's first create 3 web server containers
+Let's first create 3 web server containers. You need to name your containers as nginx1-jegan replacing 'jegan' with your name to avoid naming conflicts.
 ```
 docker run -d --name nginx1 --hostname nginx1 nginx:latest
 docker run -d --name nginx2 --hostname nginx2 nginx:latest
