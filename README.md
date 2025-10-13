@@ -1,1 +1,2 @@
-# openshift-1317oct-2025
+# Red Hat Openshift 13-17 Oct 2025
+
