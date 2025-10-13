@@ -318,3 +318,22 @@ exit
 docker ps -a
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ae59da07-6d29-417a-a6c2-ecc65a2f0e2d" />
+
+## Lab - Let's create a nginx web server container
+```
+docker run -d --name nginx1-jegan --hostname nginx1-jegan nginx:latest
+docker run -d --name nginx2-jegan --hostname nginx2-jegan nginx:latest
+docker run -d --name nginx3-jegan --hostname nginx3-jegan nginx:latest
+docker ps
+```
+
+Find the IP Addresses of the web server containers
+```
+docker inspect nginx1-jegan | grep IPA
+docker inpsect -f {{.NetworkSettings.IPAddress}} nginx1-jegan
+docker inpsect -f {{.NetworkSettings.IPAddress}} nginx2-jegan
+docker inpsect -f {{.NetworkSettings.IPAddress}} nginx3-jegan
+curl http://172.17.0.2:80
+curl http://172.17.0.3:80
+curl http://172.17.0.4:80
+```
