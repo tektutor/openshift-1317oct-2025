@@ -267,3 +267,10 @@ To delete multiple running containers forcibly
 docker rm -f ubuntu1-jegan ubuntu2-jegan ubuntu3-jegan ubuntu4-jegan
 docker rm -f $(docker ps -q --format "name=jegan")
 ```
+
+## Lab - Deleting a docker image from your local docker registry
+```
+docker images
+docker rmi hello-world:latest
+docker images
+```
