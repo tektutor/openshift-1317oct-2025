@@ -153,3 +153,10 @@ List all running containers
 docker ps
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/82d55917-bb77-4c7b-9b08-dbb5968ce375" />
+ 
+## Lab - Getting inside a container shell
+```
+docker ps | grep jegan
+docker exec -it ubuntu1-jegan /bin/bash
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c1ec1c18-012e-480b-a044-f9941556d94b" />
