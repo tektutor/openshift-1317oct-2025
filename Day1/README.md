@@ -368,7 +368,7 @@ docker inspect nginx2 | grep IPA
 docker inspect nginx3 | grep IPA
 ```
 
-Let's customize the web server on each web server
+Let's customize the web pages on each web server
 ```
 echo "Server 1" > index.html
 docker cp index.html nginx1:/usr/share/nginx/html/index.html
