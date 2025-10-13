@@ -62,6 +62,9 @@ git clone https://github.com/tektutor/openshift-1317oct-2025.git
   - What are the total logic/virtual cores = 8192 * 2 = 16384 logical/virtual cores
 </pre>
 
+## Info - Hypervisor High-Level Architecture
+<img width="2632" height="1603" alt="image" src="https://github.com/user-attachments/assets/16bda6b2-396e-4636-80e4-aa85607d0c11" />
+
 ## Info - Containerization
 <pre>
 - is an application virtualization technology
