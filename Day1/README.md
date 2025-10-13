@@ -281,10 +281,10 @@ docker images
 ## Lab - Finding IP address of a container
 ```
 docker inspect container9_jegan | grep IPA
-docker inspect -f {{.NetworksSettings.IPAddress}} container9_jegan
-docker inspect -f {{.NetworksSettings.IPAddress}} container32_jegan
-docker inspect -f {{.NetworksSettings.IPAddress}} container19_jegan
-docker inspect -f {{.NetworksSettings.IPAddress}} container29_jegan
+docker inspect -f {{.NetworkSettings.IPAddress}} container9_jegan
+docker inspect -f {{.NetworkSettings.IPAddress}} container32_jegan
+docker inspect -f {{.NetworkSettings.IPAddress}} container19_jegan
+docker inspect -f {{.NetworkSettings.IPAddress}} container29_jegan
 ping -c 2 172.17.0.7
 ```  
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3e02f569-b9ce-453d-8313-64eadf15e986" />
