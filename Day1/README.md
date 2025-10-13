@@ -202,3 +202,11 @@ docker ps
 ```
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e22b72de-aa0d-4c5f-85c1-22ae6630f7ad" />
+
+## Lab - Listing containers whose name matches a pattern
+```
+docker ps
+docker ps --filter "name=jegan"
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8a4f9548-c093-4abb-b62c-e00a89b160eb" />
