@@ -39,4 +39,13 @@ git clone https://github.com/tektutor/openshift-1317oct-2025.git
 - Virtual Machines can be created directly on top of the Hardware with no Host OS 
 - hence, you can save on the Host OS license cost
 - the hardware resources can be utilized by the Guest OS running on the Virtual Machines (VM)
+- this type of Hypervisors are used in Workstations & Servers
+</pre>
+
+## Info - Type 2 Hypervisor
+<pre>
+- In order to install Type 2 Hypervisor, we must have installed some Host OS ( Windows, Linux or Mac OS-X )
+- Hypervisor software is installed on top of the Host OS
+- VMs are created on top of the Hypervisor
+- this type of Hypervisors are used in Laptops, Desktops & Workstations
 </pre>
