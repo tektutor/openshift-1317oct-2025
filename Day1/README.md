@@ -264,5 +264,6 @@ docker rm -f ubuntu2-jegan
 
 To delete multiple running containers forcibly
 ```
+docker rm -f ubuntu1-jegan ubuntu2-jegan ubuntu3-jegan ubuntu4-jegan
 docker rm -f $(docker ps -q --format "name=jegan")
 ```
