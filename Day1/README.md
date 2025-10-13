@@ -12,7 +12,7 @@ git clone https://github.com/tektutor/openshift-1317oct-2025.git
 - with the help of virtualization, we can run multiple OS on a single physical machine
 - multiple OS can actively run side by side
 - there are 2 types of Hypervisors
-  1. Type 1 - a.k.a bare metal hypervisor
+  1. Type 1 - a.k.a bare metal hypervisor ( they don't need Host OS )
   2. Type 2 - a.k.a hosted hypervisor
 - examples
   - Type 1
@@ -49,3 +49,4 @@ git clone https://github.com/tektutor/openshift-1317oct-2025.git
 - VMs are created on top of the Hypervisor
 - this type of Hypervisors are used in Laptops, Desktops & Workstations
 </pre>
+
