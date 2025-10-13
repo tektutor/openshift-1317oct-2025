@@ -277,7 +277,7 @@ docker images
 
 ## Lab - Finding IP address of a container
 ```
-docker inspect ubuntu1-jegan | grep IPA
+docker inspect container9_jegan | grep IPA
 docker inspect -f {{.NetworksSettings.IPAddress}} container9_jegan
 docker inspect -f {{.NetworksSettings.IPAddress}} container32_jegan
 docker inspect -f {{.NetworksSettings.IPAddress}} container19_jegan
