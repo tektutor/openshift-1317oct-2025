@@ -160,3 +160,28 @@ docker ps | grep jegan
 docker exec -it ubuntu1-jegan /bin/bash
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c1ec1c18-012e-480b-a044-f9941556d94b" />
+
+## Lab - Stopping running containers
+
+Stop a single running container
+```
+docker ps
+docker stop ubuntu1-jegan
+docker ps
+docker ps -a
+```
+
+Create two more additional containers
+```
+docker run -dit --name ubuntu3-jegan --hostname ubuntu3-jegan ubuntu:latest /bin/bash
+docker run -dit --name ubuntu4-jegan --hostname ubuntu4-jegan ubuntu:latest /bin/bash
+docker ps 
+```
+
+Stop multiple running containers
+```
+docker stop ubuntu1-jegan ubuntu2-jegan ubuntu3-jegan
+docker ps
+docker ps -a
+```
+
