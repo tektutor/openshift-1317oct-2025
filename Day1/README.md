@@ -125,3 +125,29 @@ docker images
 docker images
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/675e090e-e1f1-4be6-aaa5-04ef199292c0" />
+
+
+## Lab - Downloading a docker image from Docker Remote Registry ( Docker Hub website ) to local docker registry
+```
+docker pull hello-world:latest
+docker images
+```
+
+## Lab - Creating a container and running in background(daemon) mode
+```
+docker run -dit --name ubuntu1-jegan --hostname ubuntu1-jegan ubuntu:latest /bin/bash
+docker run -dit --name ubuntu2-jegan --hostname ubuntu2-jegan ubuntu:latest /bin/bash
+```
+Note
+<pre>
+- dit - stands for deattached/daemon/background interactive
+- name - name of the container
+- hostname - hostname of the container
+- ubuntu:latest - name of docker image and its tag(version)
+- /bin/bash - we are launching a terminal as the default application inside the container
+</pre>
+
+List all running containers
+```
+docker ps
+```
