@@ -390,7 +390,7 @@ curl http://172.17.0.4:80
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9c787006-f377-4512-9c63-4584e799112b" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/fa3f9b7e-eee6-4fbf-a388-1b9949462563" />
 
-Let's create a lb container
+Let's create a lb container with port-forwarding ( You need to choose your non-conflicting port in the place of 8001 )
 ```
 docker run -d --name lb --hostname lb -p 8001:80 nginx:latest
 docker ps
