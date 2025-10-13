@@ -436,7 +436,6 @@ docker restart lb
 docker ps
 ```
 
-<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a4fb7f64-5e6c-47a3-862f-7bd24e473930" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d45f9e77-2ee2-47c2-ba33-b001290c7e27" />
 
 From your terminal, each time you should see responses coming from different web server.
