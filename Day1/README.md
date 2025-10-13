@@ -186,3 +186,19 @@ docker ps -a
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0cb760eb-93c1-401f-94b8-cc950ae3046d" />
 
+## Lab - Starting exited(stopped) containers
+
+Start a single exited container
+```
+docker ps -a
+docker start ubuntu1-jegan
+docker ps
+```
+
+Starting multiple exited containers
+```
+docker start ubuntu2-jegan ubuntu3-jegan ubuntu4-jegan
+docker ps
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e22b72de-aa0d-4c5f-85c1-22ae6630f7ad" />
