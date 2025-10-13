@@ -23,6 +23,20 @@ git clone https://github.com/tektutor/openshift-1317oct-2025.git
     - VMWare Workstation ( Windows & Linux )
     - Parallels ( Mac OS-X )
     - Oracle VirtualBox ( Windows, Mac & Linux )
+- for each VM, dedicated hardware resources must be allocated
+  - CPU Core
+  - RAM
+  - Storage ( HDD/SDD )
+  - virtual Network Cards
+  - virtual Graphics cards
+- hence this type of virtualization is referred as heavy-weight virtualization
+- the Guest OS that runs within the VMs, they are fully-functional Operating System, functionally they are same as OS running on top of a physical server
+- each VM represents one Operating System
+</pre>
 
-
+## Info - Type 1 Hypervisor
+<pre>
+- Virtual Machines can be created directly on top of the Hardware with no Host OS 
+- hence, you can save on the Host OS license cost
+- the hardware resources can be utilized by the Guest OS running on the Virtual Machines (VM)
 </pre>
