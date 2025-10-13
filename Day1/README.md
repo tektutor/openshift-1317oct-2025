@@ -106,3 +106,6 @@ git clone https://github.com/tektutor/openshift-1317oct-2025.git
   - Podman - Container Engine
     - depends on either cRun/CRI-O container runtime
 </pre>
+
+## Info - Docker High-Level Architecture
+![docker](DockerHighLevelArchitecture.png)
