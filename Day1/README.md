@@ -449,3 +449,12 @@ http://localhost:8001
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9cb77404-0f50-4e02-9fe2-d96e89714f18" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a48e5129-9d45-45bf-9a96-eca7db200930" />
 
+In order to check the web server and lb logs
+```
+docker logs nginx1
+docker logs lb
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/fd14b684-fd4c-41ef-841d-6d63e1d9ea5c" />
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e8051fe3-7ef4-4f6c-b9c6-e1ea7bb869f0" />
+
