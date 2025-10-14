@@ -114,6 +114,7 @@
 - each Pod has a secret infra-container that supports networking
 - technically, a Pod have can any number of containers, however as per best prace one container per Pod is recommended. The infra container is not counted, it is mandatory and managed by Kubernetes/Openshift internally.
 - Unlike Docker, where every container was getting an IP assigned, in case of Pod - all the containers that are part of same Pod shares the IP address and Port range (0-65535)
+- every Pod should reprent just application
 </pre>
 
 ## Info - CRI-O Container Runtime
@@ -123,7 +124,22 @@
 - any regular application that attempts to run as root(admin) are not allowed to run in Openshift
 </pre>
 
-## Info - Red
+## Lab - Creating a Pod in plain Docker
+First create a pause container
+<pre>
+docker run -d --name nginx-pause --hostname nginx registry.k8s.io/pause:latest
+docker inspect nginx-pause | grep IPA
+</pre>
+
+Let's create a nginx web server container and connect it with nginx-pause container's network
+```
+docker run -d --name nginx --network=container:nginx-pause nginx:latest
+docker ps
+docker exec -it nginx /bin/sh
+hostname
+hostname -i
+exit
+```
 
 ## Info - Checking your openshift environments
 ```
