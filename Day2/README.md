@@ -106,3 +106,9 @@ oc version
 oc get nodes
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a229ea25-d1bc-48a6-9d7d-9e4282777d5b" />
+
+## Lab - Listing Openshift Nodes in the cluster
+```
+oc get nodes
+oc get nodes -o wide
+```
