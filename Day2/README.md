@@ -347,5 +347,38 @@ Once you are done with the testing, you can press Ctrl+C in the terminal where y
 - Let's say there are two Pods Pod1 and Pod2, if Pod1 connects to Pod2 via its IP address, when the Pod2 get replaced with a different Pod by Openshift then Pod1 will longer be able to connect to Pod2. Instead Pod1 can connect a stable service.  
 - Service gets an unique name and Virtual IP (clusterip) address
 - name of the service will be resolved by DNS running within Openshift.  This is called Service Discovery
-- in no scenario we should Pod IP, as they can change anypoint of time. 
+- in no scenario we should Pod IP, as they can change anypoint of time
+- Openshift supports 3 types of services
+  1. ClusterIP - Internal service
+  2. NodePort - External service ( used within your network )
+  3. LoadBalancer - External Service ( can be accessed over Internet )
+</pre>
+
+## Info - ClusterIP Internal Service
+<pre>
+- this type of service is generally used for database servers
+- as database servers are used by your application not end-users
+- as this is an internal service, you can access this service from with a Pod shell 
+- load-balancing is supported by kube-proxy
+</pre>
+
+## Info - NodePort External Service
+<pre>
+- this type of service helps us expose our application for external access especially within your network
+- generally this won't help you expose the application over Internet
+- load-balancing is supported by kube-proxy
+</pre>
+
+## Info - LoadBalancer External Service
+<pre>
+- this type of service is used in public cloud environments like AWS, Azure, GCP, etc.,
+- When you are using a managed, load balancer service will create an external balancer supported by public cloud vendor
+  - EKS - Elastic Kubernetes Service provided by AWS
+  - AKS - Kubernetes Service provided or Azure
+  - ROSA - Managed Openshift service provided by AWS
+  - ARO - Managed Openshift Service provided by Azure
+- AWS ALB/ELB will be created when we create LoadBalancer Service for our application in EKS/ROSA
+- Azure Load Balancer will be created when we create LoadBalancer Service for our application in AKS/ARO
+- this type of service is not supported on local on-prem Kubernetes/Openshift cluster like our lab setup
+- however, we could install Metallb operator to support LoadBalancer service in bare-metal openshift cluster like our training setup
 </pre>
