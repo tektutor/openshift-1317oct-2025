@@ -118,3 +118,15 @@ oc get nodes
 oc get nodes
 oc get nodes -o wide
 ```
+
+## Lab - Finding more details about openshift nodes
+```
+oc get nodes
+oc describe node/master01.ocp4.palmeto.org
+oc describe node/master02.ocp4.palmeto.org
+oc describe node/master03.ocp4.palmeto.org
+
+oc describe node/worker01.ocp4.palmeto.org
+oc describe node/worker02.ocp4.palmeto.org
+oc describe node/worker03.ocp4.palmeto.org
+```
