@@ -193,3 +193,6 @@ oc get namespaces # Plural form
 oc get namespace  # Singular form
 oc get ns  # Short form
 ```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/344d9c55-15ad-47da-9029-46fdee9cc2ff" />
+
