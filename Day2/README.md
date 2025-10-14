@@ -214,3 +214,9 @@ oc get imagestreams
 oc get imagestream
 oc get is
 ```
+
+## Lab - Create a project to deploy your applications under it
+In the below command, replace 'jegan' with your name
+```
+oc new-project jegan
+```
