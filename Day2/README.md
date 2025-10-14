@@ -55,6 +55,9 @@
 - in order to deploy an application, you should a container image
 - developed in go language
 - works as a cluster of many nodes
+- supports many differnet types of container runtimes and container engines
+- any container runtime that implements the Container Runtime Interface (CRI) are supported by Kubernetes
+- you could any linux OS in master and worker nodes
 - each node is a server
 - the server can an ec2 instance, could be virtual machine in your data-center, could be a physical server, etc
 - the server can be installed with any Linux distribution
