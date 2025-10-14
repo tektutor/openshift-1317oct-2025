@@ -605,3 +605,56 @@ curl http://172.17.0.4:8080//weatherforecast
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0c1c954d-a03c-4aae-89fa-7b9c7f576d19" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8eb579a2-9838-4ae9-beb9-617024bc59cb" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/6773f1d6-9727-407c-b32d-09ed7b87822a" />
+
+## Lab - Understanding container namespace concepts via hands-on lab ( creating container using plain linux commands )
+
+Create two namespaces
+```
+sudo ip netns add ns1
+sudo ip netns add ns2
+```
+
+List the namespaces
+```
+sudo ip netns list
+```
+
+Create a veth (virtual ethernet pair )
+```
+sudo ip link add veth1 type veth peer name veth2
+ip link show
+```
+
+Connect each veth end to a namespace
+```
+sudo ip link set veth1 netns ns1
+sudo ip link set veth2 netns ns2
+```
+
+Assign IP addresses for the software defined network cards
+```
+sudo ip netns exec ns1 ip addr add 10.20.0.1/24 dev veth1
+sudo ip netns exec ns2 ip addr add 10.20.0.2/24 dev veth2
+```
+
+Start the interfaces
+```
+sudo ip netns exec ns1 ip link set veth1 up
+sudo ip netns exec ns2 ip link set veth2 up
+```
+
+Start the looback interfaces
+```
+sudo ip netns exec ns1 ip link set lo up
+sudo ip netns exec ns2 ip link set lo up
+```
+
+See if you can ping ns2 from ns1
+```
+sudo ip netns exec ns1 ping 10.20.0.2 -c 4
+```
+
+See if you can ping ns1 from ns2
+```
+sudo ip netns exec ns2 ping 10.20.0.1 -c 4
+```
