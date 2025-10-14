@@ -337,3 +337,15 @@ http://localhost:9090
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e5d32000-6f2d-4c8f-864c-bb0881569210" />
 
 Once you are done with the testing, you can press Ctrl+C in the terminal where you ran the port-forward command.
+
+## Info - Service
+<pre>
+- is a stable network endpoint that exposes a group of load-balanced of Pods
+- service accessed by Pods, users or external client without using the Pod IP
+- every Pod in Kubernetes/Openshift is assigned with an IP address
+- Pods are ephemeral - they can be replaced, killed, rescheduled, in this process they will be assigned with new IP address
+- Let's say there are two Pods Pod1 and Pod2, if Pod1 connects to Pod2 via its IP address, when the Pod2 get replaced with a different Pod by Openshift then Pod1 will longer be able to connect to Pod2. Instead Pod1 can connect a stable service.  
+- Service gets an unique name and Virtual IP (clusterip) address
+- name of the service will be resolved by DNS running within Openshift.  This is called Service Discovery
+- in no scenario we should Pod IP, as they can change anypoint of time. 
+</pre>
