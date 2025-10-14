@@ -420,3 +420,10 @@ cat /etc/resolv.conf
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e1da8664-a3c2-4a4a-8c2e-c39a362cb2a1" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8b608fc2-9817-499a-91fc-254bc8202d46" />
+
+## Lab - Editing the clusterip internal service
+```
+oc project jegan
+oc get svc
+oc edit svc/nginx
+```
