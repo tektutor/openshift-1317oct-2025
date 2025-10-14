@@ -216,7 +216,7 @@ oc get is
 ```
 
 ## Lab - Create a project to deploy your applications under it
-In the below command, replace 'jegan' with your name.  The newly created becomes active project automatically.
+In the below command, replace 'jegan' with your name.  The newly created project becomes active project automatically.
 ```
 oc new-project jegan
 ```
