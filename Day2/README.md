@@ -124,6 +124,23 @@
 - any regular application that attempts to run as root(admin) are not allowed to run in Openshift
 </pre>
 
+## Info - Kubernetes namespace
+<pre>
+- For each team, ideally applications has to be deployed in a separate namespace
+- in case, you haven't created a separate namespace to deploy your application, then it goes to default namespace
+- default namespace, generally has un-restricted access, which is not recommended
+- ideally we have create a separate namespace and deploy all the applications under that namespace for every project team
+</pre>  
+
+## Info - Openshift Project
+<pre>
+- is based on Kubernetes namespace
+- it supports applying security policies, Role Based Access Control on a project level
+- this way it is possible to control who has access to which projects
+- only the team members of a project team, can be given access to applications inside a project
+- this is a feature introduced in Openshift and not supported in Kubernetes
+</pre>  
+
 ## Lab - Creating a Pod in plain Docker
 First create a pause container
 <pre>
@@ -166,3 +183,4 @@ oc describe node/worker01.ocp4.palmeto.org
 oc describe node/worker02.ocp4.palmeto.org
 oc describe node/worker03.ocp4.palmeto.org
 ```
+
