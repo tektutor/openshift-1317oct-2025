@@ -305,3 +305,18 @@ oc get pods -o wide
 ```
 oc rsh deploy/nginx
 ```
+
+## Lab - Scale up nginx deployment
+```
+oc get pods -o wide
+oc scale deploy/nginx --replicas=5
+oc get pods -o wide
+
+```
+
+## Lab - Scale down nginx deployment
+```
+oc get pods -o wide
+oc scale deploy/nginx --replicas=3
+oc get pods -o wide
+```
