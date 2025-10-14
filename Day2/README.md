@@ -48,7 +48,7 @@
 - supports only Docker containerized application workloads, no other container runtimes or engines supported
 </pre>
 
-## Info - KuberneteKubernetess
+## Info - Kubernetes
 <pre>
 - Google developed this container orchestration platform
 - it is opensource and production grade
@@ -95,4 +95,6 @@
     - application can be deployed from GitHub/any version control source code
   - supports inbuilt internal container registry
   - supports Route, DeploymentConfig, Project new features etc.,
+  - pre-integrated performance monitoring tools like Prometheus & Graphana
+- Openshift is Kubernetes + Batteries included
 </pre>
