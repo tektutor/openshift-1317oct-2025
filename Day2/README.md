@@ -98,3 +98,11 @@
   - pre-integrated performance monitoring tools like Prometheus & Graphana
 - Openshift is Kubernetes + Batteries included
 </pre>
+
+## Info - Checking your openshift environments
+```
+kubectl version
+oc version
+oc get nodes
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a229ea25-d1bc-48a6-9d7d-9e4282777d5b" />
