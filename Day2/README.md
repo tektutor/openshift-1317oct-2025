@@ -141,6 +141,10 @@
 - this is a feature introduced in Openshift and not supported in Kubernetes
 </pre>  
 
+## Info - Red Hat Openshift High-Level Architecture
+![openshift](openshiftArchitecture.png)
+![openshift](master-node.png)
+
 ## Lab - Creating a Pod in plain Docker
 First create a pause container
 <pre>
