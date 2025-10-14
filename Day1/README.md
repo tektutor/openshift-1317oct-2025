@@ -116,6 +116,17 @@ git clone https://github.com/tektutor/openshift-1317oct-2025.git
 ## Info - Docker Image Layers
 ![docker](DockerLayers.png)
 
+## Info - Linux Kernel features that supports containerization
+<pre>
+1. Namespace
+   - helps in isolating one container from the other
+2. Control Groups ( CGroups )
+   - helps in applying resource quota restrictions on container level
+   - we can restrict how many CPU cores a container can use at the max
+   - we can restrict how much RAM is used by a container at the max
+</pre>
+
+
 ## Lab - Checking the docker version and details
 ```
 docker --version
