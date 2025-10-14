@@ -304,6 +304,7 @@ oc get pods -o wide
 ## Lab - Getting inside a Pod shell
 ```
 oc rsh deploy/nginx
+oc exec -it nginx-7b58f48fbb-qghbw -- /bin/sh
 ```
 
 ## Lab - Scale up nginx deployment
