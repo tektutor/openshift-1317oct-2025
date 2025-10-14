@@ -32,3 +32,51 @@
   - Google Kubernetes
   - Red Hat Openshift
 </pre>
+
+## Info - Docker SWARM
+<pre>
+- Docker SWARM is developed as an opensource project by Docker Inc organization
+- Docker's native Container Orchestration Platform
+- it works a cluster
+  - a group of servers forms the cluster
+  - the server could be a physical machine, virtual machine or an ec2 instance or could be a container
+- it is lightweight, hence with ease we can install this cluster in our laptop/desktop/workstations
+- easy to learn and maintain
+- but it is not production grade
+- it is ideal for learning Container Orchestration Platform features
+- also good for dev/qa environment for testing
+- supports only Docker containerized application workloads, no other container runtimes or engines supported
+</pre>
+
+## Info - Kubernetes
+<pre>
+- Google developed this container orchestration platform
+- it is opensource and production grade
+- works as a cluster of many nodes
+- each node is a server
+- the server can an ec2 instance, could be virtual machine in your data-center, could be a physical server, etc
+- the server can be installed with any Linux distribution
+- it is opensource and time-tested
+- before Google made this project as opensource, it was initially named borg and used withing google for many years
+- there are two of nodes
+  1. Master node
+  2. Worker Node
+- Master Node
+  - Control Plane components components will be running here
+    1. API Server
+    2. etcd database
+    3. Controller Managers
+    4. Scheduler
+  - Control Plane components runs only in master node
+- you could install any Linux OS in master and worker nodes
+- Control Plane components are the one which supports the container orchestration features
+- Worker Node
+  - this is where user application will be deployed and running
+- it supports only command-line
+</pre>
+
+## Info - Openshift
+<pre>
+- Openshift is Red Hat's Kubernetes distribution  
+- it is developed on top of Google Kubernetes
+</pre>
