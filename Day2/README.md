@@ -335,3 +335,5 @@ http://localhost:9090
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0f8f287a-47b1-4439-8b37-3b1f65c871e2" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e5d32000-6f2d-4c8f-864c-bb0881569210" />
+
+Once you are done with the testing, you can press Ctrl+C in the terminal where you ran the port-forward command.
