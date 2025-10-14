@@ -232,7 +232,7 @@ Make sure you replace 'jegan' with your name/project
 oc project jegan
 oc create deploy nginx --image=image-registry.openshift-image-registry.svc:5000/openshift/nginx:1.0 --replicas=3
 ```
-<img width="75%" height="75%" alt="image" src="https://github.com/user-attachments/assets/d415e9ee-13b3-4de3-bdc4-49c128d220c0" />
+<img width="60%" height="60%" alt="image" src="https://github.com/user-attachments/assets/d415e9ee-13b3-4de3-bdc4-49c128d220c0" />
 
 
 
