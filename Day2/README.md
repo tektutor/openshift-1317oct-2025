@@ -402,3 +402,5 @@ oc get service
 oc get svc
 oc describe svc/nginx
 ```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/69018d61-4115-4d4c-a1af-67ed1a347efe" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3e1f9a93-1a60-4ff0-91eb-c9c85443f6af" />
