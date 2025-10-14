@@ -256,3 +256,4 @@ oc get deploy,rs,po
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/eb321c93-0151-42ac-9a80-a0f64c8fe480" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2a78f584-ebee-438b-9452-4879974b7b23" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/4349f706-1a05-4409-9d4b-afa7b192ae0a" />
