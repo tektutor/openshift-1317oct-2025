@@ -48,10 +48,12 @@
 - supports only Docker containerized application workloads, no other container runtimes or engines supported
 </pre>
 
-## Info - Kubernetes
+## Info - KuberneteKubernetess
 <pre>
 - Google developed this container orchestration platform
 - it is opensource and production grade
+- in order to deploy an application, you should a container image
+- developed in go language
 - works as a cluster of many nodes
 - each node is a server
 - the server can an ec2 instance, could be virtual machine in your data-center, could be a physical server, etc
@@ -73,10 +75,24 @@
 - Worker Node
   - this is where user application will be deployed and running
 - it supports only command-line
+- Kubernetes provides basic building blocks to support
+  - Custom Resource Definintion[CRD]( New type of resources )
+  - Custom Controller
+- Operator SDK 
+  - this can be used to develop operators that can be deployed into Kubernetes/Openshift to extend K8s API(features)
 </pre>
 
-## Info - Openshift
+## Info - Red Hat Openshift
 <pre>
 - Openshift is Red Hat's Kubernetes distribution  
 - it is developed on top of Google Kubernetes
+- Openshift is superset of Kubernetes, hence it supports all the Kubernetes features + addition openshift features
+- it is enterprise product that requires license, hence one can expect world-wide support from Red Hat(an IBM company)
+- Openshift supports many additional features on top of Kubernetes
+  - Webconsole
+  - User management
+  - S2I ( Source to Image )
+    - application can be deployed from GitHub/any version control source code
+  - supports inbuilt internal container registry
+  - supports Route, DeploymentConfig, Project new features etc.,
 </pre>
