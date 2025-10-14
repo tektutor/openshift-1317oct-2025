@@ -1,4 +1,4 @@
-<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1b0df838-bbe8-4029-80ac-60c8a3dd134a" /># Day 1
+# Day 1
 
 ## Lab - Cloning this repository in your training machine ( terminal )
 ```
@@ -519,7 +519,7 @@ ls -l /tmp/jegan/mysql
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/33973ecb-a4d9-454f-b65c-1121800f8a0b" />
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2e395442-c0b3-4d34-816e-cf625a6d39c6" />
-
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1b0df838-bbe8-4029-80ac-60c8a3dd134a" />
 ## Lab - Building a custom docker image
 ```
 cd ~
