@@ -321,3 +321,17 @@ oc get pods -o wide
 oc scale deploy/nginx --replicas=3
 oc get pods -o wide
 ```
+
+## Lab - Quick testing using port-forward (not for production)
+```
+oc get pods
+oc port-forward nginx-7b58f48fbb-62c57 9090:8080
+```
+
+From web browser on the lab machine
+<pre>
+http://localhost:9090  
+</pre>
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0f8f287a-47b1-4439-8b37-3b1f65c871e2" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e5d32000-6f2d-4c8f-864c-bb0881569210" />
