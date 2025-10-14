@@ -519,3 +519,19 @@ ls -l /tmp/jegan/mysql
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/33973ecb-a4d9-454f-b65c-1121800f8a0b" />
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/2e395442-c0b3-4d34-816e-cf625a6d39c6" />
+
+## Lab - Building a custom docker image
+```
+cd ~
+git clone https://github.com/tektutor/spring-ms.git
+cd spring-ms
+tree
+docker build -t tektutor/hello-microservice:1.0 .
+docker images | grep hello-micro
+docker run -d --name hello --hostname hello tektutor/hello-microservice:1.0
+docker ps
+docker inspect hello | grep IPA
+curl http://172.17.0.3:8080
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c4f5c88d-7884-42a0-8408-3af847f99607" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9176b5fe-3e5d-4445-a3d2-4ca9b3914469" />
