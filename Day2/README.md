@@ -27,5 +27,8 @@
 - Logging
   - ELK
 - CI/CD
-  
+- examples
+  - Docker SWARM
+  - Google Kubernetes
+  - Red Hat Openshift
 </pre>
