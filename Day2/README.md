@@ -392,7 +392,7 @@ oc get deploy,pods
 
 Let's create the clusterip internal service
 ```
-oc expose deploy/nginx --type=CluterIP --port=8080
+oc expose deploy/nginx --type=ClusterIP --port=8080
 ```
 
 List the services
