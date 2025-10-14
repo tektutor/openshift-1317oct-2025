@@ -292,4 +292,5 @@ oc edit deploy/nginx
 ```
 oc get pods -o wide
 ```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/61289e30-f5b3-488a-b633-5f2e4e08b1e5" />
 
