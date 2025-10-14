@@ -108,6 +108,20 @@
     - Red Hat Enterprise Linux Core OS ( RHCOS ) - This is recommended by Red Hat
 </pre>
 
+## Info - Pod Overview
+<pre>
+- a logical group of related containers is called Pod
+</pre>
+
+## Info - CRI-O Container Runtime
+<pre>
+- this is the only container runtime supported in Openshift
+- applications running within Openshift must be root-less ( should run as non-admin user )
+- any regular application that attempts to run as root(admin) are not allowed to run in Openshift
+</pre>
+
+## Info - Red
+
 ## Info - Checking your openshift environments
 ```
 kubectl version
