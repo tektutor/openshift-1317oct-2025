@@ -184,3 +184,12 @@ oc describe node/worker02.ocp4.palmeto.org
 oc describe node/worker03.ocp4.palmeto.org
 ```
 
+## Lab - Listing projects in openshift cluster
+```
+oc get projects # Plural form
+oc get project  # Singular form
+
+oc get namespaces # Plural form
+oc get namespace  # Singular form
+oc get ns  # Short form
+```
