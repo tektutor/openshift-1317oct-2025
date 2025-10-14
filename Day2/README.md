@@ -68,10 +68,10 @@
   2. Worker Node
 - Master Node
   - Control Plane components components will be running here
-    1. API Server
-    2. etcd database
-    3. Controller Managers
-    4. Scheduler
+    1. API Server (Pod)
+    2. etcd database (Pod)
+    3. Controller Managers (Pod)
+    4. Scheduler (Pod)
   - Control Plane components runs only in master node
 - you could install any Linux OS in master and worker nodes
 - Control Plane components are the one which supports the container orchestration features
