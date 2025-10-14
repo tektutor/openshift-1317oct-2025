@@ -441,5 +441,9 @@ oc edit svc/nginx
 oc project jegan
 oc get pods
 oc logs nginx-7b58f48fbb-vtqr2
+
+# In case you wish to see the application logs as it gets printed in real-time
+oc logs -f nginx-7b58f48fbb-vtqr2
+# To exit, press Ctrl + c
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d05da1d0-91de-40f4-a2b3-3d3cc586b9f3" />
