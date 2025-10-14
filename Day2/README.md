@@ -357,6 +357,7 @@ Once you are done with the testing, you can press Ctrl+C in the terminal where y
 ## Info - ClusterIP Internal Service
 <pre>
 - this type of service is generally used for database servers
+- this is the default type of service supported in Kubernetes/Openshift
 - as database servers are used by your application not end-users
 - as this is an internal service, you can access this service from with a Pod shell 
 - load-balancing is supported by kube-proxy
@@ -382,3 +383,22 @@ Once you are done with the testing, you can press Ctrl+C in the terminal where y
 - this type of service is not supported on local on-prem Kubernetes/Openshift cluster like our lab setup
 - however, we could install Metallb operator to support LoadBalancer service in bare-metal openshift cluster like our training setup
 </pre>
+
+## Lab - Creating a clusterip internal service for nginx deployment
+```
+oc project jegan
+oc get deploy,pods
+```
+
+Let's create the clusterip internal service
+```
+oc expose deploy/nginx --type=CluterIP --port=8080
+```
+
+List the services
+```
+oc get services
+oc get service
+oc get svc
+oc describe svc/nginx
+```
