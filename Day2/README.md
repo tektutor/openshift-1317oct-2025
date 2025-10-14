@@ -287,3 +287,9 @@ oc edit rs/nginx-7b58f48fbb
 ```
 oc edit deploy/nginx
 ```
+
+## Lab - Finding the IP address of Pods
+```
+oc get pods -o wide
+```
+
