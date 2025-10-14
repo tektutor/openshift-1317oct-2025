@@ -196,3 +196,21 @@ oc get ns  # Short form
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/344d9c55-15ad-47da-9029-46fdee9cc2ff" />
 
+## Lab - Finding the current active project
+```
+oc project
+```
+
+## Lab - Switching between projects
+```
+oc project default
+oc project openshift
+```
+
+## Lab - Listing the container images in openshift's internal registry
+```
+oc project openshift
+oc get imagestreams
+oc get imagestream
+oc get is
+```
