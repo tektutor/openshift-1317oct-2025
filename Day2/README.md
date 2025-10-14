@@ -407,7 +407,7 @@ oc describe svc/nginx
 
 Let's create a test-pod to access the clusterip internal nginx service
 ```
-oc run my-test-pod --image=mage-registry.openshift-image-registry.svc:5000/openshift/spring-ms:latest
+oc run my-test-pod --image=image-registry.openshift-image-registry.svc:5000/openshift/spring-ms:latest
 oc get pods
 ```
 
@@ -416,3 +416,4 @@ Let's get inside the my-tes-pod shell to access the nginx internal service
 oc exec -it my-test-pod -- sh
 curl http://nginx:8080
 ```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e1da8664-a3c2-4a4a-8c2e-c39a362cb2a1" />
