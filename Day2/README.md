@@ -221,3 +221,36 @@ In the below command, replace 'jegan' with your name.  The newly created becomes
 oc new-project jegan
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0498bbb2-1836-4605-a8e1-5cce8ef95f19" />
+
+## Lab - Deploying your first application into openshift using imperative command
+Make sure your are replace 'jegan' with your name/project
+```
+oc project jegan
+oc create deploy nginx --image=image-registry.openshift-image-registry.svc:5000/openshift/nginx:1.0 --replicas=3
+```
+
+List the deployments in your project namespace
+```
+oc get deployments
+oc get deployment
+oc get deploy
+```
+
+List the replicasets in your project namespace
+```
+oc get replicasets
+oc get replicaset
+oc get rs
+```
+
+List the pods in your project namespace
+```
+oc get pods
+oc get pod
+oc get po
+```
+
+List multiple resources 
+```
+oc get deploy,rs,po
+```
