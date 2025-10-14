@@ -97,6 +97,12 @@
   - supports Route, DeploymentConfig, Project new features etc.,
   - pre-integrated performance monitoring tools like Prometheus & Graphana
 - Openshift is Kubernetes + Batteries included
+- Openshift Master Nodes
+  - OS Supported - the only OS supported is Red Hat Enterprise Linux Core OS (RHCOS)
+- Openshift Worker Nodes
+  - OS Supported
+    - Red Hat Enterprise Linux ( RHEL ) or
+    - Red Hat Enterprise Linux Core OS ( RHCOS ) - This is recommended by Red Hat
 </pre>
 
 ## Info - Checking your openshift environments
