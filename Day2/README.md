@@ -421,6 +421,14 @@ cat /etc/resolv.conf
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e1da8664-a3c2-4a4a-8c2e-c39a362cb2a1" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8b608fc2-9817-499a-91fc-254bc8202d46" />
 
+At the time the kubelet creates the Pod containers, it also configures the /etc/resolv.conf with the DNS service IP.
+```
+oc get pods -o wide -n openshift-dns
+oc get svc -n openshift-dns
+oc describe svc/default-dns -n openshift-dns
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f213af55-2c07-4b3e-9fca-0e9ea4a3a355" />
+
 ## Lab - Editing the clusterip internal service
 ```
 oc project jegan
