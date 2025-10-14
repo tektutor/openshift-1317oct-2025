@@ -435,3 +435,11 @@ oc project jegan
 oc get svc
 oc edit svc/nginx
 ```
+
+## Lab - Checking pod logs
+```
+oc project jegan
+oc get pods
+oc logs nginx-7b58f48fbb-vtqr2
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d05da1d0-91de-40f4-a2b3-3d3cc586b9f3" />
