@@ -223,7 +223,7 @@ oc new-project jegan
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0498bbb2-1836-4605-a8e1-5cce8ef95f19" />
 
 ## Lab - Deploying your first application into openshift using imperative command
-Make sure your are replace 'jegan' with your name/project
+Make sure you replace 'jegan' with your name/project
 ```
 oc project jegan
 oc create deploy nginx --image=image-registry.openshift-image-registry.svc:5000/openshift/nginx:1.0 --replicas=3
