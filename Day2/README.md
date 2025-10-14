@@ -301,3 +301,7 @@ oc get pods -o wide
 ```
 <img width="75%" height="75%" alt="image" src="https://github.com/user-attachments/assets/61289e30-f5b3-488a-b633-5f2e4e08b1e5" />
 
+## Lab - Getting inside a Pod shell
+```
+oc rsh deploy/nginx
+```
