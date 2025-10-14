@@ -110,7 +110,10 @@
 
 ## Info - Pod Overview
 <pre>
-- a logical group of related containers is called Pod
+- logical group of related containers is called Pod
+- each Pod has a secret infra-container that supports networking
+- technically, a Pod have can any number of containers, however as per best prace one container per Pod is recommended. The infra container is not counted, it is mandatory and managed by Kubernetes/Openshift internally.
+- Unlike Docker, where every container was getting an IP assigned, in case of Pod - all the containers that are part of same Pod shares the IP address and Port range (0-65535)
 </pre>
 
 ## Info - CRI-O Container Runtime
