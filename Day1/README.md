@@ -535,3 +535,62 @@ curl http://172.17.0.3:8080
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c4f5c88d-7884-42a0-8408-3af847f99607" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9176b5fe-3e5d-4445-a3d2-4ca9b3914469" />
+
+## Lab - Containerize a dot net application
+```
+cd ~
+mkdir MyDotNetApp
+cd MyDotNetApp
+dotnet new webapi -n MyApi
+cd MyApi
+```
+
+Run and test your application location
+```
+dotnet run
+```
+
+From another terminal tab
+```
+curl http://localhost:5030/weatherforecast
+```
+
+Inside the MyApi folder, create a Dockerfile with the below content
+<pre>
+FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
+WORKDIR /src
+
+COPY *.csproj .
+RUN dotnet restore
+
+COPY . .
+RUN dotnet publish -c Release -o /app/publish
+
+FROM mcr.microsoft.com/dotnet/aspnet:8.0 AS runtime
+WORKDIR /app
+
+COPY --from=build /app/publish .
+
+EXPOSE 8080
+ENTRYPOINT ["dotnet", "MyApi.dll"]  
+</pre>
+
+Build your custom image
+```
+docker build tektutor/my-dotnet-app .
+docker images | grep my-dot
+```
+
+Run the container
+```
+docker run -d --name mydotapp --hostname mydotapp tektutor/my-dotnet-app
+```
+
+Find the IP address of your container
+```
+docker inspect mydotapp | grep IPA
+curl http://172.17.0.4:8080//weatherforecast
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0c1c954d-a03c-4aae-89fa-7b9c7f576d19" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/8eb579a2-9838-4ae9-beb9-617024bc59cb" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/6773f1d6-9727-407c-b32d-09ed7b87822a" />
