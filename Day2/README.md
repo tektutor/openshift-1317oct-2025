@@ -272,3 +272,18 @@ oc describe rs/nginx-7b58f48fbb
 ```
 oc describe pod/nginx-7b58f48fbb-dnmf2
 ```
+
+## Lab - Edit a pod definition
+```
+oc edit pod/nginx-7b58f48fbb-tfq25
+```
+
+## Lab - Edit a replicaset definition
+```
+oc edit rs/nginx-7b58f48fbb
+```
+
+## Lab - Edit a deployment definition
+```
+oc edit deploy/nginx
+```
