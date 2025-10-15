@@ -106,6 +106,8 @@ When it prompts for password, type the password shown in your openshift.txt file
 cd ~
 cat openshift.txt
 oc whoami
+oc whoami --show-server
+oc whoami --show-console
 oc login -u kubeadmin https://api.ocp4.palmeto.org:6443 --insecure-skip-tls-verify=true
 ```
 
