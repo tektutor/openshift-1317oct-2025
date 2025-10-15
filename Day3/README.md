@@ -99,3 +99,13 @@ oc describe buildconfigs/hello
 oc describe build/hello-1
 oc get bc/hello -o yaml
 </pre>
+
+## Lab - Login to openshift from command-line
+When it prompts for password, type the password shown in your openshift.txt file kept in your home directory
+```
+cd ~
+cat openshift.txt
+oc whoami
+oc login -u kubeadmin https://api.ocp4.palmeto.org:6443 --insecure-skip-tls-verify=true
+```
+
