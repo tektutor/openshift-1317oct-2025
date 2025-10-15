@@ -117,3 +117,14 @@ oc login -u kubeadmin https://api.ocp4.palmeto.org:6443 --insecure-skip-tls-veri
 ```
 curl -k -H "Authorization: Bearer $(oc whoami -t)" -H "Accept: application/json" https://api.ocp4.palmeto.org:6443/api/v1/pods
 ```
+
+## Lab - Deploying spring-boot application from Webconsole
+
+Navigage to your Openshift webconsole
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a275ba67-729e-490e-af29-20e093e8c902" />
+
+Click Home-->Software Catalog
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/44da3923-2fe7-4fdf-b1a8-47d4d062f4b2" />
+Search for "spring" and select "Basic SpringBoot"
+Click "Create" button
+![Uploading image.png…]()
