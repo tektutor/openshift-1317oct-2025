@@ -138,3 +138,11 @@ Click "Advanced"
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f67e32e7-6ada-42f8-aba9-36f2d2b4c56c" />
 Click "Accept Risk and Continue"
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/56a2e531-ece5-463f-a898-926c13026443" />
+
+Delete Application from Webconsole
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/926cfba6-b411-407e-bb0b-88a249c67795" />
+Click "Delete Application"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/95c032ab-fcfb-48f3-83c0-ee41c6497894" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9a009131-3d76-4504-b183-83e20ff7c95b" />
+Click "Delete" button
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/efb2e703-db33-49bf-ac46-8b287d1e2d28" />
