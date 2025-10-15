@@ -76,3 +76,11 @@ curl http://hello-jegan.apps.ocp4.palmeto.org
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c65886c8-e04a-45e3-9f2d-ae4c35db16b4" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e7ebb893-e846-4f5f-bf4d-9c2f14e5f3be" />
 
+Try to understand buildconfig
+```
+oc project jegan
+oc get buildconfigs
+oc get builds
+oc describe buildconfigs/hello
+oc describe build/hello-1
+```
