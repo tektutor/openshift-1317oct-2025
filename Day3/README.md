@@ -192,3 +192,31 @@ oc apply -f nginx-clusterip-svc.yml
 oc get svc
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/90e208b7-497b-4fd2-977b-0e0c6cf1bd4a" />
+
+## Lab - Creating a nodeport external service using declarative approach
+```
+oc project jegan
+oc get deploy
+
+# Delete the clusterip service, otherwise it will conflict with nodeport service
+oc delete -f nginx-clusterip-svc.yml
+
+# Create the nodeport external service
+oc expose deploy/nginx --type=NodePort --port=8080 --dry-run=client -o yaml
+oc expose deploy/nginx --type=NodePort --port=8080 --dry-run=client -o yaml > nginx-nodeport-svc.yml
+oc apply -f nginx-nodeport-svc.yml
+
+oc get svc
+
+# Accessing nodeport service
+curl http://<any-node-ip>:<node-port-shown-in-service-usually-30000-range>
+curl http://192.168.100.11:31419 # Using master1 node IP
+curl http://192.168.100.12:31419 # Using master2 node IP
+curl http://192.168.100.13:31419 # Using master3 node IP
+curl http://192.168.100.21:31419 # Using worker1 node IP
+curl http://192.168.100.22:31419 # Using worker2 node IP
+curl http://192.168.100.23:31419 # Using worker3 node IP
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f7ba37c2-74cb-4aed-86f9-cbf85b13d184" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/86c29f83-4f62-4b91-88a5-14e65919c005" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/af9f4391-9857-4bb1-8f40-80d0ea72e11e" />
