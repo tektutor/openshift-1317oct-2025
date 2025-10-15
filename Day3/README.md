@@ -260,7 +260,13 @@ curl http://192.168.100.25:8080
 - Behind an ingress there could be multiple services ( clusterip, nodeport and load-balancer services )
 - Behind each service service, there could be several pods from a single deployment
 - Ingress forwards the request to the service behind, the service forward the request to one of the load-balanced pods
-
 </pre>
 
 ## Info - Route Overview
+<pre>
+- is an Openshift feature, that is built on-top of kuberenetes ingress feature
+- Behind a Kubernetes Ingress there will many services ( clusterip, nodeport and load-balancer services for different applications )
+- Behind an Openshift Route there will just one service ( clusterip or nodeport or load-balancer service for just a single application)
+- this is a neat way to expose your application for external access with a public url for a single applicaiton in Openshift
+- Route is not supported in Kubernetes
+</pre>
