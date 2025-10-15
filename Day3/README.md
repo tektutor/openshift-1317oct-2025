@@ -298,3 +298,38 @@ curl http://tektutor.apps.ocp4.palmeto.org/tektutor
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1471ffbf-53ad-4ca8-83d4-d8f2a52541d4" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a678d81d-8a46-4426-aa0d-ae39ff1cbc61" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ffe6b055-4a30-4920-a1a5-bc77c2cd7c90" />
+
+## Lab - Rolling update 
+```
+cd ~/openshift-1317oct-2025
+git pull
+cd Day3/rolling-update
+oc delete project jegan
+oc new-project jegan
+
+oc apply -f hello-deploy.yml
+oc apply -f hello-svc.yml
+oc apply -f hello-route.yml
+oc get deploy,rs,po
+
+oc get pods -o json | grep image # Here you can observer the image version used is hello:5.0
+oc get routes
+curl http://hello-jegan.apps.ocp4.palmeto.org # Here you will see Hello Microservice v5.0
+
+#Let's perform rolling update by bumping up image version from 5.0 to 6.0 in the hello-deploy
+oc apply -f hello-deploy.yml
+oc get deploy,rs,po
+
+oc rollout status deploy/hello
+oc rollout history deploy/hello
+
+oc get pods -o json | grep image # Here you can observer the image version used is hello:6.0
+oc get routes
+curl http://hello-jegan.apps.ocp4.palmeto.org # Here you will see Hello Microservice v6.0
+
+# Let's undo the rolling update - it is supposed revert back to v5.0
+oc rollout undo deploy/nginx
+oc rollout status deploy/nginx
+curl http://hello-jegan.apps.ocp4.palmeto.org # Here you will see Hello Microservice v5.0
+
+```
