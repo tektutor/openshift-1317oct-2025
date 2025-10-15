@@ -80,11 +80,13 @@ oc get routes
 
 curl http://hello-jegan.apps.ocp4.palmeto.org
 ```
+
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/54e6b8e1-eca9-462c-b38a-42636bb1aad1" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/5eb16938-97a0-4259-b35c-22ea360a271e" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/fb98c084-a059-472e-ad5c-ef027aa9edf8" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c65886c8-e04a-45e3-9f2d-ae4c35db16b4" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e7ebb893-e846-4f5f-bf4d-9c2f14e5f3be" />
+
 
 Try to understand buildconfig
 
@@ -94,6 +96,5 @@ oc get buildconfigs
 oc get builds
 oc describe buildconfigs/hello
 oc describe build/hello-1
-
 oc get bc/hello -o yaml
 ```
