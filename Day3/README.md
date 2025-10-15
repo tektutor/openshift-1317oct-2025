@@ -146,3 +146,13 @@ Click "Delete Application"
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/9a009131-3d76-4504-b183-83e20ff7c95b" />
 Click "Delete" button
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/efb2e703-db33-49bf-ac46-8b287d1e2d28" />
+
+## Lab - Deploying a Simple Dot Net Application
+Navigate to "Software Catalog" in Openshift Webconsole
+Select ".Net Application"
+Click "Create" button
+Click "Create" button
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/68d581d4-f5a2-4642-8f24-faf2e0963df9" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/06f5180f-d95e-4612-9c4e-56b0468305e5" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/de55dce7-0d38-44e0-82b2-6fcecad1a17f" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/5a91743d-fc73-4070-9b5d-22c67542bbe1" />
