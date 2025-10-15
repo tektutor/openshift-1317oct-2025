@@ -83,4 +83,6 @@ oc get buildconfigs
 oc get builds
 oc describe buildconfigs/hello
 oc describe build/hello-1
+
+oc edit bc/hello
 ```
