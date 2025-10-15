@@ -111,3 +111,4 @@ oc whoami --show-console
 oc login -u kubeadmin https://api.ocp4.palmeto.org:6443 --insecure-skip-tls-verify=true
 ```
 
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/946967fc-7ab5-48de-9dfb-b0f3d7a9263c" />
