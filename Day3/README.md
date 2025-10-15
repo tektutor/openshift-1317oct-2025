@@ -9,7 +9,7 @@
   2. Source
   3. Custom
   4. Pipeline(Jenkins/TekTon)
-  4. Binary(S2I Binary)
+  5. Binary(S2I Binary)
 </pre>
 
 ## Info - Openshift S2I Docker Strategy
