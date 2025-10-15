@@ -316,7 +316,8 @@ oc get pods -o json | grep image # Here you can observe the image version used i
 oc get routes
 curl http://hello-jegan.apps.ocp4.palmeto.org # Here you will see Hello Microservice v5.0
 
-# Let's perform rolling update by bumping up image version from 5.0 to 6.0 in the hello-deploy.yml file manually( you need to edit it)
+# Let's perform rolling update by bumping up image version from 5.0 to 6.0 in the hello-deploy.yml file manually
+# you need to edit and save the hello-deploy.yml before proceeding
 oc apply -f hello-deploy.yml
 oc get deploy,rs,po
 
