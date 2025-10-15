@@ -237,3 +237,30 @@ curl http://192.168.100.25:8080
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f5e8b12e-1c87-4e3a-8151-53d338f75b0a" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/cdf1605b-ad0f-40fd-8492-753c1d544481" />
+
+## Info - ClusterIP vs NodePort vs LoadBalancer Service
+<pre>
+- ClusterIP is an service, this is used to provide access within the openshift cluster
+- usually database access is allowed to application running within openshift, while restricting the access to external world
+- nodeport - in case you have a frontend application or web application that must allowed external access you can go for noreport service.  However, nodeport service will be accessible only within your office/work network not from Internet
+- loadbalancer - in case you wish to expose your application to your end-users over internet, go for loadbalancer service.  This provides a public static ip on public cloud environments like AWS, Azure, GCP, etc., but there will be an additional cost charged by AWS/Azure/GCP for the external loadbalancer
+</pre>
+
+## Info - Ingress Overview
+<pre>
+- Ingress is not a service
+- Ingress is a Kubernetes native way to expose HTTP(s) public url to end-users outside the cluster
+- Ingress has forward/routing rules
+- Generally your openshift cluster will have any one of the Ingress Controllers
+  1. Nginx Ingress Controller
+  2. HAProxy Ingress Controller
+  3. F5 Ingress Controller
+- The Ingress Controller will be monitoring for new Ingress rules defined in any project namespace.  When it detects new ingress or ingress is updated, it picks those rules and configures the LoadBalancer with the rules mentioned in the ingress.
+- We need to ensure, the correct Ingress Controller is annotated in your ingress rule. 
+- Behind an ingress there could be multiple services ( clusterip, nodeport and load-balancer services )
+- Behind each service service, there could be several pods from a single deployment
+- Ingress forwards the request to the service behind, the service forward the request to one of the load-balanced pods
+
+</pre>
+
+## Info - Route Overview
