@@ -112,3 +112,8 @@ oc login -u kubeadmin https://api.ocp4.palmeto.org:6443 --insecure-skip-tls-veri
 ```
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/c7233014-c748-460e-81fc-4fe4a66a0e64" />
+
+## Lab - List all pods with curl command
+```
+curl -k -H "Authorization: Bearer $(oc whoami -t)" -H "Accept: application/json" https://api.ocp4.palmeto.org:6443/api/v1/pods
+```
