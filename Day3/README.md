@@ -161,3 +161,20 @@ Click "Create" button
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/06f5180f-d95e-4612-9c4e-56b0468305e5" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/de55dce7-0d38-44e0-82b2-6fcecad1a17f" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/5a91743d-fc73-4070-9b5d-22c67542bbe1" />
+
+## Lab - Deploying application into Openshift using declarative style
+```
+oc delete project jegan
+oc new-project jegan
+
+oc create deploy nginx --image=image-registry.openshift-image-registry.svc:5000/openshift/nginx:1.0 --replicas=3 --dry-run=client -o yaml
+
+oc create deploy nginx --image=image-registry.openshift-image-registry.svc:5000/openshift/nginx:1.0 --replicas=3 --dry-run=client -o yaml > nginx-deploy.yml
+```
+
+Let's declaratively deploy nginx web server using manifest file(yaml)
+```
+oc create -f nginx-deploy.yml --save-config
+oc get deploy,rs,po
+```
+The above command will assume the nginx deployment is not there already, if there is deployment by name nginx already in your project, it report error and quit. The save-config switch will save the meta-data in etcd database i.e using which yaml file we create this resource.  The next time, you made some delta change in the file and use the apply command it will validate wherether the resource was originally created using the same file nor not.
