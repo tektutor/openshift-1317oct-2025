@@ -220,3 +220,20 @@ curl http://192.168.100.23:31419 # Using worker3 node IP
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f7ba37c2-74cb-4aed-86f9-cbf85b13d184" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/86c29f83-4f62-4b91-88a5-14e65919c005" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/af9f4391-9857-4bb1-8f40-80d0ea72e11e" />
+
+## Lab - Create the loadbalancer external service using declarative approach
+```
+# Make sure to delete existing nodeport service to avoid conflict
+oc delete -f nginx-nodeport-svc.yml
+
+oc expose deploy/nginx --type=LoadBalancer --port=8080 --dry-run=client -o yaml
+oc expose deploy/nginx --type=LoadBalancer --port=8080 --dry-run=client -o yaml > nginx-lb-svc.yml
+oc apply -f nginx-lb-svc.yml
+oc get svc
+
+curl http://<service-external-ip>:8080
+curl http://192.168.100.25:8080
+```
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f5e8b12e-1c87-4e3a-8151-53d338f75b0a" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/cdf1605b-ad0f-40fd-8492-753c1d544481" />
