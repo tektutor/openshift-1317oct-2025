@@ -181,3 +181,14 @@ The above command will assume the nginx deployment is not there already, if ther
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0ab3f150-3d1f-4607-b1c2-86a97a13e9f6" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f5964bd7-fb12-4910-941a-3692e680a351" />
+
+## Lab - Creating a clusterip internal service using declarative approach
+```
+oc project jegan
+oc get deploy
+oc expose deploy/nginx --type=ClusterIP --port=8080 --dry-run=client -o yaml
+oc expose deploy/nginx --type=ClusterIP --port=8080 --dry-run=client -o yaml > nginx-clusterip-svc.yml
+oc apply -f nginx-clusterip-svc.yml
+oc get svc
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/90e208b7-497b-4fd2-977b-0e0c6cf1bd4a" />
