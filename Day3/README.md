@@ -310,6 +310,7 @@ oc new-project jegan
 oc apply -f hello-deploy.yml
 oc apply -f hello-svc.yml
 oc apply -f hello-route.yml
+oc get deploy,rs,po
 
 oc get pods -o json | grep image # Here you can observer the image version used is hello:5.0
 oc get routes
@@ -317,14 +318,14 @@ curl http://hello-jegan.apps.ocp4.palmeto.org # Here you will see Hello Microser
 
 #Let's perform rolling update by bumping up image version from 5.0 to 6.0 in the hello-deploy
 oc apply -f hello-deploy.yml
-oc get pods
+oc get deploy,rs,po
+
 oc rollout status deploy/hello
 oc rollout history deploy/hello
 
 oc get pods -o json | grep image # Here you can observer the image version used is hello:6.0
 oc get routes
 curl http://hello-jegan.apps.ocp4.palmeto.org # Here you will see Hello Microservice v6.0
-
 
 # Let's undo the rolling update - it is supposed revert back to v5.0
 oc rollout undo deploy/nginx
