@@ -329,7 +329,7 @@ oc get pods -o json | grep image # Here you can observe the image version used i
 oc get routes
 curl http://hello-jegan.apps.ocp4.palmeto.org # Here you will see Hello Microservice v6.0
 
-# Let's undo the rolling update - it is supposed revert back to v5.0
+# Let's undo the rolling update - it is supposed to revert back to v5.0
 oc rollout undo deploy/hello
 oc rollout status deploy/hello
 curl http://hello-jegan.apps.ocp4.palmeto.org # Here you will see Hello Microservice v5.0
