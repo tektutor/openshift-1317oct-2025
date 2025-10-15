@@ -149,8 +149,13 @@ Click "Delete" button
 
 ## Lab - Deploying a Simple Dot Net Application
 Navigate to "Software Catalog" in Openshift Webconsole
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/5aa4834f-d1ff-423a-b253-5cd8eb152505" />
 Select ".Net Application"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/cafcd4b4-1367-4264-9d4b-7e0fce417d10" />
+
 Click "Create" button
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ce54cea0-76d0-46a4-9302-4b706fedc946" />
+
 Click "Create" button
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/68d581d4-f5a2-4642-8f24-faf2e0963df9" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/06f5180f-d95e-4612-9c4e-56b0468305e5" />
