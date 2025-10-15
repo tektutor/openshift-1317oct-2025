@@ -270,3 +270,31 @@ curl http://192.168.100.25:8080
 - this is a neat way to expose your application for external access with a public url for a single applicaiton in Openshift
 - Route is not supported in Kubernetes
 </pre>
+
+## Lab - Creating a ingress rule to foward requests to hello and nginx deployments
+Clone the TekTutor Training Repository
+```
+cd ~
+git clone https://github.com/tektutor/openshift-1317oct-2025.git
+cd openshift-1317oct-2025
+cd Day3/ingress
+oc delete project jegan
+oc new-project jegan
+
+oc apply -f nginx-deploy.yml
+oc apply -f nginx-svc.yml
+
+oc apply -f hello-deploy.yml
+oc apply -f hello-svc.yml
+
+oc get pods
+oc apply -f ingress.yml
+oc get ingress
+oc describe ingress/tektutor
+
+curl http://tektutor.apps.ocp4.palmeto.org/nginx
+curl http://tektutor.apps.ocp4.palmeto.org/tektutor
+```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1471ffbf-53ad-4ca8-83d4-d8f2a52541d4" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a678d81d-8a46-4426-aa0d-ae39ff1cbc61" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ffe6b055-4a30-4920-a1a5-bc77c2cd7c90" />
