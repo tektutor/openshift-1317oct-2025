@@ -233,7 +233,7 @@ oc project jegan
 oc create deploy nginx --image=image-registry.openshift-image-registry.svc:5000/openshift/nginx:1.0 --replicas=3
 ```
 <img width="60%" height="60%" alt="image" src="https://github.com/user-attachments/assets/d415e9ee-13b3-4de3-bdc4-49c128d220c0" />
-
+![openshift](deployment.png)
 
 
 List the deployments in your project namespace
