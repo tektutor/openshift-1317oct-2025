@@ -297,3 +297,4 @@ curl http://tektutor.apps.ocp4.palmeto.org/tektutor
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/1471ffbf-53ad-4ca8-83d4-d8f2a52541d4" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a678d81d-8a46-4426-aa0d-ae39ff1cbc61" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ffe6b055-4a30-4920-a1a5-bc77c2cd7c90" />
