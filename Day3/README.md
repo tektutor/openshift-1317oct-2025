@@ -127,4 +127,14 @@ Click Home-->Software Catalog
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/44da3923-2fe7-4fdf-b1a8-47d4d062f4b2" />
 Search for "spring" and select "Basic SpringBoot"
 Click "Create" button
-![Uploading image.png…]()
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/7857e62b-1c9c-40a6-9883-6b82ad31c2b6" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/06874133-a39b-49f6-999c-af77881aa65e" />
+Accept default and proceed to Click "Create"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3c980817-9a25-4890-80bd-93121c58e867" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/92a55104-5030-4a68-9685-dd22a3ae86e0" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3bf50a13-4fe9-4189-bc87-0e0764da90d3" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e9ca4647-11b1-44e4-9522-e8de77e655de" />
+Click "Advanced"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/f67e32e7-6ada-42f8-aba9-36f2d2b4c56c" />
+Click "Accept Risk and Continue"
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/56a2e531-ece5-463f-a898-926c13026443" />
