@@ -312,18 +312,20 @@ oc apply -f hello-svc.yml
 oc apply -f hello-route.yml
 oc get deploy,rs,po
 
-oc get pods -o json | grep image # Here you can observer the image version used is hello:5.0
+oc get pods -o json | grep image # Here you can observe the image version used is hello:5.0
 oc get routes
 curl http://hello-jegan.apps.ocp4.palmeto.org # Here you will see Hello Microservice v5.0
 
-#Let's perform rolling update by bumping up image version from 5.0 to 6.0 in the hello-deploy
+# Let's perform rolling update by bumping up image version from 5.0 to 6.0 in the hello-deploy.yml file manually
+# you need to edit and save the hello-deploy.yml before proceeding
 oc apply -f hello-deploy.yml
 oc get deploy,rs,po
 
+# Let's check the rolling update status
 oc rollout status deploy/hello
 oc rollout history deploy/hello
 
-oc get pods -o json | grep image # Here you can observer the image version used is hello:6.0
+oc get pods -o json | grep image # Here you can observe the image version used is hello:6.0
 oc get routes
 curl http://hello-jegan.apps.ocp4.palmeto.org # Here you will see Hello Microservice v6.0
 
