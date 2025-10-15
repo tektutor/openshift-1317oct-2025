@@ -300,6 +300,12 @@ curl http://tektutor.apps.ocp4.palmeto.org/tektutor
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ffe6b055-4a30-4920-a1a5-bc77c2cd7c90" />
 
 ## Lab - Rolling update 
+
+<pre>
+- Rolling update helps us upgrade our live application from one version to other
+- You could as well roll back to immediate previous version or to any other older versions you had deployed in the past
+</pre>
+
 ```
 cd ~/openshift-1317oct-2025
 git pull
