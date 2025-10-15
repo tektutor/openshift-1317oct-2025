@@ -178,3 +178,5 @@ oc create -f nginx-deploy.yml --save-config
 oc get deploy,rs,po
 ```
 The above command will assume the nginx deployment is not there already, if there is deployment by name nginx already in your project, it report error and quit. The save-config switch will save the meta-data in etcd database i.e using which yaml file we create this resource.  The next time, you made some delta change in the file and use the apply command it will validate wherether the resource was originally created using the same file nor not.
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/0ab3f150-3d1f-4607-b1c2-86a97a13e9f6" />
