@@ -16,3 +16,13 @@ oc logs -f bc/hello
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/387dd5a5-062b-4af8-a83d-45b8441a9350" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a811d3fd-8f72-422a-a97a-1bda255502d8" />
 
+## Lab - Deploying the application using S2I source strategy
+```
+oc delete project jegan
+oc new-project jegan
+
+oc new-app --name=hello registry.access.redhat.com/ubi8/openjdk-17~https://github.com/tektutor/spring-ms.git --strategy=source
+oc expose svc/hello
+
+oc logs -f bc/hello
+```
