@@ -87,6 +87,7 @@ curl http://hello-jegan.apps.ocp4.palmeto.org
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/e7ebb893-e846-4f5f-bf4d-9c2f14e5f3be" />
 
 Try to understand buildconfig
+
 ```
 oc project jegan
 oc get buildconfigs
