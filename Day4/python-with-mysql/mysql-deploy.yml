@@ -32,12 +32,12 @@ spec:
           valueFrom:
             secretKeyRef:
               name: mysql-secret 
-              key: MYSQL_USER 
+              key: MYSQL_ROOT_USER 
         - name: MARIADB_ROOT_PASSWORD 
           valueFrom:
             secretKeyRef:
               name: mysql-secret 
-              key: MYSQL_PASSWORD 
+              key: MYSQL_ROOT_PASSWORD 
         - name: MARIADB_USER
           valueFrom:
             secretKeyRef:
