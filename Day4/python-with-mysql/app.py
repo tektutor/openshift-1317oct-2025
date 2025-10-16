@@ -18,6 +18,7 @@ def getConnection():
        cursorclass=pymysql.cursors.DictCursor
     )
 
+@app.route("/")
 def index():
     conn = getConnection()
     with conn.cursor() as cursor:
