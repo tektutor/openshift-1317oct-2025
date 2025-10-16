@@ -26,7 +26,7 @@
 - You can then access the application using the route url from command-line or from the web console
 </pre>
 
-## Info - Openshift S2I Docker Strategy
+## Info - Openshift S2I Source Strategy
 <pre>
 - You will have to provide your Version control url, for example - https://github.com/tektutor/spring-ms.git
 - The GitHub url must have just the source code, Dockerfile is not required even if is there it will be ignored in the source strategy
@@ -300,6 +300,12 @@ curl http://tektutor.apps.ocp4.palmeto.org/tektutor
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ffe6b055-4a30-4920-a1a5-bc77c2cd7c90" />
 
 ## Lab - Rolling update 
+
+<pre>
+- Rolling update helps us upgrade our live application from one version to other
+- You could as well roll back to immediate previous version or to any other older versions you had deployed in the past
+</pre>
+
 ```
 cd ~/openshift-1317oct-2025
 git pull
@@ -329,9 +335,9 @@ oc get pods -o json | grep image # Here you can observe the image version used i
 oc get routes
 curl http://hello-jegan.apps.ocp4.palmeto.org # Here you will see Hello Microservice v6.0
 
-# Let's undo the rolling update - it is supposed revert back to v5.0
-oc rollout undo deploy/nginx
-oc rollout status deploy/nginx
+# Let's undo the rolling update - it is supposed to revert back to v5.0
+oc rollout undo deploy/hello
+oc rollout status deploy/hello
 curl http://hello-jegan.apps.ocp4.palmeto.org # Here you will see Hello Microservice v5.0
 
 ```
