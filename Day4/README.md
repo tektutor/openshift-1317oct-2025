@@ -53,5 +53,7 @@ cd Day4/wordpress
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3ac0f037-9987-44a4-b825-9af5276cf701" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/acad4f6f-edcb-4967-8abd-5029c334a71e" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/12645738-95a3-41b0-9d27-0772542c3d7d" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ed7580bc-4b12-444f-9a15-0357982bcd2b" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b032180f-fca4-4d1a-9fd7-fa1d55fd754e" />
 
 
