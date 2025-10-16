@@ -19,7 +19,7 @@ def getConnection():
     )
 
 def index():
-    conn = getConnection)()
+    conn = getConnection()
     with conn.cursor() as cursor:
         cursor.execute("CREATE TABLE IF NOT EXISTS visits (count INT)")
         cursor.execute("SELECT count FROM visits")
