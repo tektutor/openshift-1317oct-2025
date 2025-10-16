@@ -1,6 +1,6 @@
 # Day 4
 
-## Info - Persistent Volume
+## Info - Persistent Volume (PV)
 <pre>
 - is an external storage used by applications that needs storage
 - is a piece of storage in the Openshift cluster that is provisioned by Openshift Administrator
@@ -12,10 +12,24 @@
   - AWS EBS
   - GlusterFS
   - etc
+- PVs are cluster scoped, it is accessible by applications from any Project namespace
 - Persistent Volumes usually will have the follow properties
-  - Size in Mi, Gi, Ti
+  - Storage Size in Mi, Gi, Ti
   - Access Mode
     - ReadWriteOnce, ReadWriteMany, ReadOnlyMany, ReadOnlyOnce, ReadWriteOncePod
   - StorageClass (optional) - in case provisioned dynamically
   - Labels ( Optional )
+</pre>
+
+## Info - Persistent Volume Claim (PVC)
+<pre>
+- is a request for storage by your application
+- any application that needs external storage to peristent their application logs or data will have request by creating PVC
+- Project namespace scoped ( tied to a project )
+- Key Properties
+  - Storage Size in Mi, Gi, Ti, etc.,
+  - Access Mode
+  - StorageClass (Optional)
+  - Labels (Optional)
+- If the Storage Controller is able to find an exact match of PV as per your PVC request then it will let your PVC bound and use it in your application deployments
 </pre>
