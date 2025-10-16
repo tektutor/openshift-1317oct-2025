@@ -5,8 +5,8 @@ import os
 app = Flask(__name__)
 
 DB_HOST = os.environ.get("MYSQL_HOST", "mysql")
-DB_USER = os.environ.get("MYSQL_USER", "root")
-DB_PASSWORD = os.environ.get("MYSQL_PASSWORD", "root@123")
+DB_USER = os.environ.get("MYSQL_USER", "flaskuser")
+DB_PASSWORD = os.environ.get("MYSQL_PASSWORD", "flaskpass")
 DB_NAME = os.environ.get("MYSQL_DATABASE", "flaskdb")
 
 def getConnection():
