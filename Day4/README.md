@@ -118,6 +118,27 @@ oc get deploy,po,pv,pvc,svc,route
 
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/91e2db86-90af-43f6-96e0-0acc1f582b65" />
 
+## Info - Subnet
+<pre>
+- Range of IP address
+- a bigger network is broken down to small network called subnet to apply different security policy or access
+- IPV4 IP Address
+  - 100.200.3.20 ( 4 bytes )
+  - A.B.C.D 
+  - A - 1 byte ( 8 bits )
+  - B - 1 byte ( 8 bits )
+  - C - 1 byte ( 8 bits )
+  - D - 1 byte ( 8 bits )
+  - 1 byte we represents numbers in the range 0 to 255 (256 values)
+- Let's say there is subnet 10.131.0.0/24
+  - 10 is fixed ( 8 bits )
+  - 131 is fixed ( 8 bits )
+  - 0 is fixed ( 8 bits )
+  - How many IP addresses are there in 10.131.0.0/24 - 256 IP addresses are there
+</pre>
+
+
+
 ## Flannel Network Model
 <pre>
 Flannel is a simple and easy way to configure a layer 3 network fabric designed for Kubernetes. 
