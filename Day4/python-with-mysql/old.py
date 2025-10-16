@@ -20,7 +20,20 @@ def getConnection():
 
 @app.route("/")
 def index():
-    return "Hello from Flask!"
+    conn = getConnection()
+    with conn.cursor() as cursor:
+        cursor.execute("CREATE TABLE IF NOT EXISTS visits (count INT)")
+        cursor.execute("SELECT count FROM visits")
+        result = cursor.fetchone()
+        if result is None:
+            cursor.execute("INSERT INTO visits (count) VALUES (1)")
+            visits = 1
+        else:
+            visits = result['count'] + 1
+            cursor.execute("UPDATE visits SET count=%s",(visits,))
+        conn.commit()
+    conn.close()
+    return jsonify({"message": f"Hello! This page has been visited {visits} times."})
 
 if __name__ == "__main__":
     app.run(host="0.0.0.0",port=8080)
