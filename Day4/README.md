@@ -75,3 +75,42 @@ cd Day4/wordpress-with-configmaps-and-secrets
 
 ./deploy.sh
 ```
+
+## Info - Helm
+<pre>
+- Helm is a package manager to install/unistall/upgrade applications in Kubernetes and Openshift
+- The packaged application is called Helm chart
+- Helm charts follows a specific directory
+- Helm is a Kubernetes/openshift aware tool, hence it know in which our application resources should be deployed and undeployed
+</pre>
+
+## Lab - Packaging our Wordpress & Mariadb multi-pod application as custom helm char and deploy that chart
+```
+cd ~/openshift-1317oct-2025
+git pull
+cd Day4/helm-chart
+
+helm create wordpress
+cd wordpress/templates
+rm -rf *
+cd ../..
+
+# Edit the values.yaml and update your NFS Server IP, wordpress and mariadb nfs shared path alloted to you
+cp values.yaml wordpress
+cp scripts/* wordpress/templates
+tree
+helm package wordpress
+ls -l
+helm install wordpress wordpress-0.1.0.tgz
+helm list
+oc get pods
+
+# You can now access the wordpress from your openshift webconsole
+```
+
+Once you have verified, you may delete the wordpress deployed using helm package manager
+```
+helm list
+helm install wordpress
+oc get deploy,po,pv,pvc,svc,route
+```
