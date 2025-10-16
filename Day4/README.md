@@ -50,3 +50,8 @@ cd Day4/wordpress
 # Also make sure the NFS Server IP is updated to 192.168.3.200 if you are working in Server 1 other to 192.168.3.201
 ./deploy.sh
 ```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3ac0f037-9987-44a4-b825-9af5276cf701" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/acad4f6f-edcb-4967-8abd-5029c334a71e" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/12645738-95a3-41b0-9d27-0772542c3d7d" />
+
+
