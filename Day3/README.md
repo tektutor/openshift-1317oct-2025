@@ -26,7 +26,7 @@
 - You can then access the application using the route url from command-line or from the web console
 </pre>
 
-## Info - Openshift S2I Docker Strategy
+## Info - Openshift S2I Source Strategy
 <pre>
 - You will have to provide your Version control url, for example - https://github.com/tektutor/spring-ms.git
 - The GitHub url must have just the source code, Dockerfile is not required even if is there it will be ignored in the source strategy
