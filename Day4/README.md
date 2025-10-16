@@ -64,4 +64,14 @@ cd Day4/wordpress
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/ed7580bc-4b12-444f-9a15-0357982bcd2b" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/b032180f-fca4-4d1a-9fd7-fa1d55fd754e" />
 
+## Lab - Deploying wordpress and mariadb multi-pod application that makes use of PV and PVC
+```
+cd ~/openshift-1317oct-2025
+git pull
+cd Day4/wordpress-with-configmaps-and-secrets
+# Make sure you have updated the below files
+# mysql-pv.yml mysql-pvc.yml mysql-deploy.yml
+# wordpress-pv.yml wordpress-pvc.yml wordpress-deploy.yml
 
+./deploy.sh
+```
