@@ -114,6 +114,9 @@ helm list
 helm install wordpress
 oc get deploy,po,pv,pvc,svc,route
 ```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d07e7408-75fa-4041-84e4-5f4cc64f874d" />
+
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/91e2db86-90af-43f6-96e0-0acc1f582b65" />
 
 ## Flannel Network Model
 <pre>
