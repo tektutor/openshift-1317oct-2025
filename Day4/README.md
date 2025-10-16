@@ -1,5 +1,12 @@
 # Day 4
 
+## Lab - Login to Openshift in the command-line
+```
+cd ~
+cat ~/openshift.txt
+oc login -u kubeadmin https://api.ocp4.palmeto.org:6443 --insecure-skip-tls-verify=true
+```
+
 ## Info - Persistent Volume (PV)
 <pre>
 - is an external storage used by applications that needs storage
