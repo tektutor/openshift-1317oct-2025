@@ -47,7 +47,8 @@ git pull
 cd Day4/wordpress
 # Make sure you replace 'jegan' with your name in mysql-pv.yml mysql-pvc.yml mysql-deploy.yml wordpress-pv.yml wordpress-pvc.yml wordpress-deploy.yml
 
-# Also make sure the NFS Server IP is updated to 192.168.3.200 if you are working in Server 1 other to 192.168.3.201
+# Also make sure the NFS Server IP is updated to 192.168.3.200 if you are working in Server 1
+# otherwise update to 192.168.3.201
 ./deploy.sh
 ```
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/3ac0f037-9987-44a4-b825-9af5276cf701" />
