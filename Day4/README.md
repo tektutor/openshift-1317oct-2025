@@ -2,7 +2,7 @@
 
 ## Info - Persistent Volume
 <pre>
-- is an exter
+- is an external storage used by applications that needs storage
 - is a piece of storage in the Openshift cluster that is provisioned by Openshift Administrator
 - it can be either manually provisioned by Openshift Administrator or Dynamically Provisioned
 - Persistent Volume can be be provisioned by following backends
