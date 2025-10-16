@@ -33,3 +33,9 @@
   - Labels (Optional)
 - If the Storage Controller is able to find an exact match of PV as per your PVC request then it will let your PVC bound and use it in your application deployments
 </pre>
+
+## Lab - Kindly check to verify NFS shared folder allocated for you
+Replace 'jegan' with your name
+```
+showmount -e | grep jegan
+```
