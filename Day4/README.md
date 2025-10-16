@@ -39,3 +39,14 @@ Replace 'jegan' with your name
 ```
 showmount -e | grep jegan
 ```
+
+## Lab - Deploying Worpress and Mariadb multi-pod application to host a blog website
+```
+cd ~/openshift-1317oct-2025
+git pull
+cd Day4/wordpress
+# Make sure you replace 'jegan' with your name in mysql-pv.yml mysql-pvc.yml mysql-deploy.yml wordpress-pv.yml wordpress-pvc.yml wordpress-deploy.yml
+
+# Also make sure the NFS Server IP is updated to 192.168.3.200 if you are working in Server 1 other to 192.168.3.201
+./deploy.sh
+```
