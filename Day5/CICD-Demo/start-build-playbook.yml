@@ -11,6 +11,10 @@
     register: output
 
   - debug: var=output
+
+  - name: Delete existing hello deployment if present
+    shell: oc delete -f deploy.yml
+    ignore_errors: yes
   
   - name: Start application build followed by image build
     shell: oc apply -f buildconfig.yml && oc start-build bc/spring-hello
