@@ -249,7 +249,7 @@ oc logs -f your-jms-consumer-pod-name
 </pre>
 
 
-## Certifications
+## Certifications Recommended
 <pre>
 - Red Hat Openshift I - Containers & Kubernetes ( DO180 )
 - Red Hat Openshift Development II - Containerizing Applications ( DO288 )
