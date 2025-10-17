@@ -104,7 +104,7 @@ oc logs -f your-jms-consumer-pod-name
 
 ## Info - Microservice Overview
 <pre>
-- Microservice is an architectural style where application is built as a collectionof small, 
+- Microservice is an architectural style where application is built as a collection of small, 
   independent and loosely coupled services
 - each microservice will be responsible for specific business logic
 - microservice to microservice communications can be achieved with HTTP/REST, gRPC or message queues
