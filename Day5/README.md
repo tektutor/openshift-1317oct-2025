@@ -297,7 +297,10 @@ You can access Jenkins Dashboard from your lab machine Firefox web browser, you 
 ```
 http://localhost:8080
 ```
-
+You can refer my blog to understand the Jenkins setup procedure
+<pre>
+https://www.tektutor.org/ci-cd-with-maven-github-docker-jenkins/  
+</pre>  
 
 ## Certifications Recommended
 <pre>
