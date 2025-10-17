@@ -279,6 +279,21 @@ oc logs -f your-jms-consumer-pod-name
 </pre>
 
 
+## Lab - Setting up CICD Jenkins Job
+
+Download Jenkins
+```
+cd ~
+wget https://get.jenkins.io/war-stable/2.528.1/jenkins.war
+```
+
+Starting jenkins in interactively from a terminal ( once you start jenkins, you may open new terminal tabs as the current terminal tab will be used by Jenkins forever)
+```
+cd ~
+java -jar ./jenkins.war
+```
+
+
 ## Certifications Recommended
 <pre>
 - Red Hat Openshift I - Containers & Kubernetes ( DO180 )
