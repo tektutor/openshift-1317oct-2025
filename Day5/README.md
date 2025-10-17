@@ -304,6 +304,25 @@ https://www.tektutor.org/ci-cd-with-maven-github-docker-jenkins/
 
 <img width="3212" height="1640" alt="image" src="https://github.com/user-attachments/assets/0ca3ed1a-7daa-441e-bf4e-d2c312663a18" />
 
+## Lab - Additional exercise ( Autoscaling )
+```
+cd ~/openshift-1317oct-2025
+git pull
+cd Day5/auto-scaling
+oc apply -f hello-deploy.yml
+oc expose deploy/hello --port=8080
+oc expose svc/hello
+# In Terminal Window 1
+oc get pods -w
+
+# In Terminal Window 2
+hey -z 1m -c 50 http://hello-jegan.apps.ocp4.palmeto.org
+
+# Observe the Terminal Window 1, Pods will gradually scale up as we are stressing the application with hey tool in Terminal Window 2
+# After a minute time, the stressing tool will stop automatically
+# In some time, you will see the pods will scale down to 3 pods automatically
+```
+
 ## Certifications Recommended
 <pre>
 - Red Hat Openshift I - Containers & Kubernetes ( DO180 )
