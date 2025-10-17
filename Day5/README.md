@@ -295,7 +295,7 @@ java -jar ./jenkins.war --httpPort=8080
 
 You can access Jenkins Dashboard from your lab machine Firefox web browser, you need to replace 8080 with some non-conflicting port
 ```
-http://localhost:8080 --httpPort=8080
+http://localhost:8080
 ```
 
 
