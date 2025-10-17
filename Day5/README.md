@@ -102,7 +102,7 @@ oc logs -f your-jms-producer-pod-name
 oc logs -f your-jms-consumer-pod-name
 ```
 
-## Info - Security your Openshift Cluster and applications deployed in Openshift
+## Info - Secure your Openshift Cluster and applications deployed in Openshift
 
 #### Authentication & Authorization
 <pre>
