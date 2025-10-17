@@ -13,4 +13,4 @@
   - debug: var=output
   
   - name: Start application build followed by image build
-    shell: oc apply -f buildconfig.yml
+    shell: oc apply -f buildconfig.yml && oc start-build bc/spring-hello
