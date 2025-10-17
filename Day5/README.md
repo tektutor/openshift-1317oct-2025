@@ -302,6 +302,8 @@ You can refer my blog to understand the Jenkins setup procedure
 https://www.tektutor.org/ci-cd-with-maven-github-docker-jenkins/  
 </pre>  
 
+<img width="3212" height="1640" alt="image" src="https://github.com/user-attachments/assets/0ca3ed1a-7daa-441e-bf4e-d2c312663a18" />
+
 ## Certifications Recommended
 <pre>
 - Red Hat Openshift I - Containers & Kubernetes ( DO180 )
