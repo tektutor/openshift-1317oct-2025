@@ -290,7 +290,7 @@ wget https://get.jenkins.io/war-stable/2.528.1/jenkins.war
 Starting jenkins in interactively from a terminal ( once you start jenkins, you may open new terminal tabs as the current terminal tab will be used by Jenkins forever)
 ```
 cd ~
-java -jar ./jenkins.war
+java -jar ./jenkins.war --httpPort=8080
 ```
 
 You can access Jenkins Dashboard from your lab machine Firefox web browser, you need to replace 8080 with some non-conflicting port
