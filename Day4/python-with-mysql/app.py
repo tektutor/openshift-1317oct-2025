@@ -18,9 +18,38 @@ def getConnection():
        cursorclass=pymysql.cursors.DictCursor
     )
 
+# Ensure table exists
+def init_db():
+    conn = getConnection()
+    with conn:
+        with conn.cursor() as cursor:
+            cursor.execute("""
+                CREATE TABLE IF NOT EXISTS page_visits (
+                    id INT PRIMARY KEY AUTO_INCREMENT,
+                    visits INT NOT NULL
+                )
+            """)
+            # Insert initial row if table empty
+            cursor.execute("SELECT COUNT(*) AS count FROM page_visits")
+            result = cursor.fetchone()
+            if result['count'] == 0:
+                cursor.execute("INSERT INTO page_visits (visits) VALUES (0)")
+        conn.commit()
+
 @app.route("/")
 def index():
-    return "Hello from Flask!"
+    conn = getConnection()
+    with conn:
+        with conn.cursor() as cursor:
+            # Increment visits
+            cursor.execute("UPDATE page_visits SET visits = visits + 1 WHERE id = 1")
+            conn.commit()
+            # Fetch current visit count
+            cursor.execute("SELECT visits FROM page_visits WHERE id = 1")
+            result = cursor.fetchone()
+            visits = result['visits']
+    return jsonify({"message": "Hello from Flask!", "visits": visits})
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0",port=8080)
+    init_db()
+    app.run(host="0.0.0.0", port=8080)
