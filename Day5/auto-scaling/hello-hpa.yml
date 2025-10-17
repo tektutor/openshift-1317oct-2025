@@ -1,5 +1,6 @@
 apiVersion: autoscaling/v2
-kind: HorizontalPodAutoScaler
+kind: HorizontalPodAutoscaler
+
 metadata:
   name: hello-hpa
 spec:
