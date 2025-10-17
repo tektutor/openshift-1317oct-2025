@@ -247,3 +247,11 @@ oc logs -f your-jms-consumer-pod-name
 - Regular pen-testing and red teaming
 - Shift-left security in CI/CD
 </pre>
+
+
+## Certifications
+<pre>
+- Red Hat Openshift I - Containers & Kubernetes ( DO180 )
+- Red Hat Openshift Development II - Containerizing Applications ( DO288 )
+- Red Hat Openshift Application Developer Exam ( EX288 )
+</pre>
