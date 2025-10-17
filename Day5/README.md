@@ -119,7 +119,7 @@ oc logs -f your-jms-consumer-pod-name
 
 ## Info - Monolithic Application Overview
 <pre>
-- is a traditional appliction that is built as a single application binary
+- is a traditional application that is built as a single application binary
 - all components will be bundled in the single application binary
   - Frontend
   - Business Layer
