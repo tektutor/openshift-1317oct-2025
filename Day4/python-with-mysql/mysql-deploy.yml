@@ -38,17 +38,6 @@ spec:
             secretKeyRef:
               name: mysql-secret 
               key: MYSQL_ROOT_PASSWORD 
-        - name: MARIADB_USER
-          valueFrom:
-            secretKeyRef:
-              name: mysql-secret 
-              key: MYSQL_USER 
-        - name: MARIADB_PASSWORD 
-          valueFrom:
-            secretKeyRef:
-              name: mysql-secret 
-              key: MYSQL_PASSWORD 
-
         - name: MARIADB_DATABASE
           valueFrom: 
              secretKeyRef:
