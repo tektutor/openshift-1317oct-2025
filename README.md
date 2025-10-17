@@ -12,7 +12,7 @@ https://forms.cloud.microsoft/r/kEVhfs1tfg
 
 #### Note
 <pre>
-- While registering for the pre-test, kindly share your full name so that your L&D will be able to recognize you
+- While registering for the post-test, kindly share your full name so that your L&D will be able to recognize you
 - Do not share your BOFA email for pre-test or during the time for any reason
 - Once everyone confirms after pre-test completion let's proceed with the training
 </pre>
