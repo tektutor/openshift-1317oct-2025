@@ -254,4 +254,7 @@ oc logs -f your-jms-consumer-pod-name
 - Red Hat Openshift I - Containers & Kubernetes ( DO180 )
 - Red Hat Openshift Development II - Containerizing Applications ( DO288 )
 - Red Hat Openshift Application Developer Exam ( EX288 )
+- Red Hat Certified Specialist in Openshift Application Development
+- Red Hat Certified Specialist in Containers 
+- Red Hat Certified Architect (RHCA)
 </pre>
