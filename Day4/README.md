@@ -659,3 +659,70 @@ curl -L --http2 flask-app-jegan.apps.ocp4.palmeto.org
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a23edfcb-74d6-4b8d-97e7-070967cef6c6" />
 <img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/356c51f9-c6c2-4c8d-8d0c-9821266b0622" />
 
+## Lab - NodeAffinity Required vs Preferred
+<pre>
+- In case your application is disk intensive application, it is preferrable to get a node that has Solid State Disk. 
+- In case of preferred node affinity, 
+  - the scheduler will look for nodes that satisfies your application preferance before deploying the pods onto a node.  
+  - if it finds such a matching node, your pods will only be deployed on those nodes
+  - if scheduler fails to find a matching node, scheduler will go ahead and deploy onto any node as usual
+- In case of required node affinity,
+  - the scheduler will look for nodes that satisfies your application preferance before deploying the pods onto a node 
+  - if it finds such a matching node, your pods will only be deployed on those nodes
+  - if scheduler fails to find a matching node, scheduler will not deploy the pods on any node and it waits until it finds a matching node
+</pre>
+```
+cd ~/openshift-1317oct-2025
+git pull
+cd Day4/scheduler-node-affinity
+
+# Make sure there are no nodes with label disk=ssd
+oc label node worker02.ocp4.palmeto disk-
+oc get nodes -l disk=ssd
+
+oc apply -f nginx-preferred-deploy.yml
+# Though there are no nodes matching the disk=ssd label criteria, scheduler will deploy the pods normally
+oc get pods -o wide
+
+# Let's undeploy
+oc delete -f nginx-preferred-deploy.yml
+
+# Let's label worker2
+oc label node worker02.ocp4.palmeto disk=ssd
+oc get nodes -l disk=ssd
+
+oc apply -f nginx-preferred-deploy.yml
+# All the nginx pods will be deployed into worker02 node as your the preferred criteria
+oc get pods -o wide
+
+# Let's undeploy
+oc delete -f nginx-preferred-deploy.yml
+
+# Find how many nodes satisfies the label criteria disk=ssd
+oc get nodes -l disk=ssd
+
+# Deploy with required criteria
+oc apply -f nginx-required-deploy.yml
+# All pods will be deployed in worker02 as your required criteria
+oc get pods -o wide
+
+# Let's undeploy
+oc delete -f nginx-required-deploy.yml
+
+# Let's remove the label from worker02
+oc label node worker02.ocp4.palmeto.org disk-
+oc get nodes -l disk=ssd
+
+# Deploy with required criteria
+oc apply -f nginx-required-deploy.yml
+# All pods will be in the Pending state as no nodes satisfies your application's criteria to deploy
+oc get pods -o wide
+
+# Now, try labelling any one of the node
+oc label node worker01.ocp4.palmeto.org disk=ssd
+# Now you can observe all the pods are automatically deployed into worker1 
+oc get pods -o wide
+
+# You may undeploy once you are done with this exercise
+oc delete -f nginx-required-deploy.yml
+```
