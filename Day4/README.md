@@ -640,3 +640,17 @@ Choose Weave when:
 - Require good troubleshooting tools
 - Need automatic network discovery
 </pre>
+
+## Lab - Deploying Python and mysql multipod application
+```
+cd ~/openshift-1317oct-2025
+git pull
+cd Day4/python-with-sql
+
+# Make sure you have update mysql-pv.yml mysql-pvc.yml mysql-deploy.yml before proceeding further
+./deploy.sh
+oc get pods
+oc get routes
+# Update your route url below
+curl -L --http2 flask-app-jegan.apps.ocp4.palmeto.org
+```
