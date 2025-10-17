@@ -654,3 +654,8 @@ oc get routes
 # Update your route url below
 curl -L --http2 flask-app-jegan.apps.ocp4.palmeto.org
 ```
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/d6bfe20a-bbf1-4949-8481-84e4dced7cd8" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/27271d95-b032-4645-a561-785089078e3c" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/a23edfcb-74d6-4b8d-97e7-070967cef6c6" />
+<img width="1920" height="1168" alt="image" src="https://github.com/user-attachments/assets/356c51f9-c6c2-4c8d-8d0c-9821266b0622" />
+
