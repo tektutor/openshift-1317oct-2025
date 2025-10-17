@@ -1,8 +1,13 @@
 # Red Hat Openshift 13-17 Oct 2025
 
-## Pre Assessment Link ( Kindly complete the test from your lab machine ) 
+## Post Assessment Link
 <pre>
-https://forms.cloud.microsoft/r/Har7U6sJW1
+https://forms.cloud.microsoft/r/706U7YjXXC
+</pre>
+ 
+## Feedback Link
+<pre>
+https://forms.cloud.microsoft/r/kEVhfs1tfg
 </pre>
 
 #### Note
